@@ -1,11 +1,11 @@
 @import "reset.css";
 
-my_library {
+.my_library {
   color: white;
+  width: 1200px;
   font-size: 50px;
   font-weight: 700;
-  display: flex;
-  justify-content: center;
+  margin: 0 auto;
 }
 
 .library_list {
@@ -17,14 +17,24 @@ my_library {
 
 .library_list .library_list_ex {
   padding: 20px;
+  color: inherit;
+  text-decoration: none;
 }
 
 .library_list_ex .library_list__num {
   width: 200px;
   height: 145px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 10px;
+  background-color: #c4c4c4;
 }
 
 .library_list_ex .library_list__title {
   width: 200px;
   height: 40px;
+  font-size: 20px;
+  font-weight: 600;
+  border: 1px solid #c4c4c4;
 }

@@ -53,10 +53,12 @@ main {
 .Btn_eng {
   font-weight: 600;
   font-size: 40px;
+  text-align: center;
 }
 
 .Btn_kor {
   font-size: 20px;
+  text-align: center;
 }
 
 .Btn_icon {
