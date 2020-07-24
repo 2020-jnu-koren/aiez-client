@@ -1,4 +1,6 @@
-.my_library {
+@import "reset.css";
+
+my_library {
   color: white;
   font-size: 50px;
   font-weight: 700;

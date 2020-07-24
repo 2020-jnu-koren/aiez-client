@@ -1,29 +1,29 @@
-* {
-  box-sizing: border-box;
+@import "reset.css";
+
+.body {
+  width: 1200px;
+  margin: 0 auto;
 }
 
 .header {
-  display: flex;
-  align-items: center;
   background-color: white;
-  border-top: 1px solid black;
-}
-
-.header .header__center {
-  margin: 25px auto;
-  width: 1600px;
-}
-
-.header .header__center .header__title {
   display: flex;
   justify-content: flex-end;
-  font-size: 23px;
-  padding-right: 110px;
+  align-items: center;
+  border-top: 1px solid black;
 }
 
 main {
   background-color: #b2d5e6;
   height: 700px;
+}
+
+.Btn_number {
+  margin-left: 30px;
+  margin-bottom: 10px;
+  font-size: 50px;
+  font-weight: bold;
+  color: white;
 }
 
 .Btns {
@@ -34,8 +34,6 @@ main {
 }
 
 .Btn {
-  color: inherit;
-  text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,6 +42,8 @@ main {
   width: 380px;
   background-color: white;
   margin: 0 30px;
+  color: inherit;
+  text-decoration: none;
 }
 
 .Btn_item {
@@ -52,9 +52,16 @@ main {
 
 .Btn_eng {
   font-weight: 600;
-  font-size: 25px;
+  font-size: 40px;
 }
 
 .Btn_kor {
   font-size: 20px;
+}
+
+.Btn_icon {
+  width: 200px;
+  height: 200px;
+  margin-bottom: -50px;
+  margin-top: -70px;
 }

@@ -20,7 +20,7 @@ class Project extends React.Component {
                 <div className="project-bar__title">Architecture</div>
                 <div className="project-bar__title">Storage</div>
               </div>
-              <div className="project-bar__column">
+              <div className="project-bar__column new-project-btn__column">
                 <Link className="new-project-btn" to="/project/new_project">
                   New Project
                 </Link>

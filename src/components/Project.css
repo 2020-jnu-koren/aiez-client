@@ -1,3 +1,5 @@
+@import "reset.css";
+
 * {
   box-sizing: border-box;
 }
@@ -28,8 +30,10 @@ body {
 }
 
 .project-bar {
+  width: 1200px;
+  margin: 0px auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   margin-top: 55px;
   margin-bottom: 10px;
@@ -50,13 +54,19 @@ body {
   font-size: 25px;
   font-weight: 700;
   width: 230px;
-  padding: 20px 20px;
+  padding: 20px 0;
   border-radius: 15px;
   background-color: white;
   display: flex;
   justify-content: center;
+
+  color: inherit;
+  text-decoration: none;
 }
 
+.new-project-btn__column {
+  margin-left: 100px;
+}
 .project-list {
   display: flex;
   justify-content: space-between;
@@ -93,9 +103,4 @@ body {
   padding: 10px 25px;
   background-color: #eecd59;
   border-radius: 10px;
-}
-
-.new-project-btn {
-  color: inherit;
-  text-decoration: none;
 }

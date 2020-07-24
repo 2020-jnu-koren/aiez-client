@@ -1,0 +1,56 @@
+.WhatToDo {
+  width: 1300px;
+  margin: 40px auto;
+}
+
+.WTD_Eng {
+  font-size: 40px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.WTD_Kor {
+  font-size: 25px;
+  font-weight: 700;
+  color: white;
+}
+
+.Setting_select {
+  width: 1300px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.Setting_column {
+  padding-right: 100px;
+}
+
+.Setting_big_item {
+  font-size: 30px;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 30px;
+}
+
+.Setting_list {
+  display: flex;
+}
+
+.Training_Tool {
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+.Setting_item {
+  width: 220px;
+  font-size: 30px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.Setting_input {
+  width: 200px;
+  height: 30px;
+  background-color: white;
+}

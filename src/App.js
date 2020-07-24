@@ -8,6 +8,8 @@ import New_project from "./components/New_project";
 import More_models from "./components/More_models";
 import Upload_data from "./components/Upload_data";
 import Prepare_data from "./components/Prepare_data";
+import Train_data from "./components/Train_data";
+import Setting from "./components/Setting";
 import Navigation from "./components/Navigation";
 
 function App() {
@@ -23,6 +25,15 @@ function App() {
       <Route
         path="/project/new_project/prepare_data"
         component={Prepare_data}
+      />
+      <Route
+        path="/project/new_project/train_data"
+        exact={true}
+        component={Train_data}
+      />
+      <Route
+        path="/project/new_project/train_data/setting"
+        component={Setting}
       />
     </HashRouter>
   );
