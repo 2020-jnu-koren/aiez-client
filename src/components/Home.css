@@ -10,21 +10,41 @@
 }
 
 .intro {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between; */
   height: 700px;
+  width: 1200px;
+  position: relative;
 }
 
-.intro_item {
+.intro_info {
+  position: absolute;
+  top: 20%;
+  font-size: 50px;
+  font-weight: 700;
+}
+.intro_background {
+  width: 1400px;
+  height: 700px;
+}
+/* .intro_item {
   padding: 0 30px;
+} */
+
+.main_info {
+  margin-bottom: 20px;
+}
+.sub_info {
+  font-size: 30px;
 }
 
 .goToProject {
   font-size: 30px;
-  background-color: #eecd59;
-  color: black;
+  font-weight: 600;
+  background-color: #b2bfff;
+  color: white;
   padding: 10px 20px;
   border-radius: 20px;
-  font-weight: 500;
+  text-decoration: none;
 }
