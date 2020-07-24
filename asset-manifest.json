@@ -1,24 +1,27 @@
 {
   "files": {
-    "main.css": "/aiez-client/static/css/main.854194ac.chunk.css",
-    "main.js": "/aiez-client/static/js/main.1966597e.chunk.js",
-    "main.js.map": "/aiez-client/static/js/main.1966597e.chunk.js.map",
+    "main.css": "/aiez-client/static/css/main.fb590bae.chunk.css",
+    "main.js": "/aiez-client/static/js/main.d493d0f5.chunk.js",
+    "main.js.map": "/aiez-client/static/js/main.d493d0f5.chunk.js.map",
     "runtime-main.js": "/aiez-client/static/js/runtime-main.6a672411.js",
     "runtime-main.js.map": "/aiez-client/static/js/runtime-main.6a672411.js.map",
-    "static/js/2.505a5fac.chunk.js": "/aiez-client/static/js/2.505a5fac.chunk.js",
-    "static/js/2.505a5fac.chunk.js.map": "/aiez-client/static/js/2.505a5fac.chunk.js.map",
+    "static/js/2.01af1e29.chunk.js": "/aiez-client/static/js/2.01af1e29.chunk.js",
+    "static/js/2.01af1e29.chunk.js.map": "/aiez-client/static/js/2.01af1e29.chunk.js.map",
     "index.html": "/aiez-client/index.html",
-    "precache-manifest.23c3d14cd1207a70f5aac61319c9f4a6.js": "/aiez-client/precache-manifest.23c3d14cd1207a70f5aac61319c9f4a6.js",
+    "precache-manifest.dc722e5703c4ceca410cbf7b5e1a74e5.js": "/aiez-client/precache-manifest.dc722e5703c4ceca410cbf7b5e1a74e5.js",
     "service-worker.js": "/aiez-client/service-worker.js",
-    "static/css/main.854194ac.chunk.css.map": "/aiez-client/static/css/main.854194ac.chunk.css.map",
-    "static/js/2.505a5fac.chunk.js.LICENSE.txt": "/aiez-client/static/js/2.505a5fac.chunk.js.LICENSE.txt",
+    "static/css/main.fb590bae.chunk.css.map": "/aiez-client/static/css/main.fb590bae.chunk.css.map",
+    "static/js/2.01af1e29.chunk.js.LICENSE.txt": "/aiez-client/static/js/2.01af1e29.chunk.js.LICENSE.txt",
+    "static/media/area_selection.svg": "/aiez-client/static/media/area_selection.b9284b16.svg",
     "static/media/computingCloud.png": "/aiez-client/static/media/computingCloud.72f6cfe0.png",
-    "static/media/downArrow.svg": "/aiez-client/static/media/downArrow.8b44c690.svg"
+    "static/media/cursor.svg": "/aiez-client/static/media/cursor.17bff56d.svg",
+    "static/media/downArrow.svg": "/aiez-client/static/media/downArrow.8b44c690.svg",
+    "static/media/drag.svg": "/aiez-client/static/media/drag.e49f23b6.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.6a672411.js",
-    "static/js/2.505a5fac.chunk.js",
-    "static/css/main.854194ac.chunk.css",
-    "static/js/main.1966597e.chunk.js"
+    "static/js/2.01af1e29.chunk.js",
+    "static/css/main.fb590bae.chunk.css",
+    "static/js/main.d493d0f5.chunk.js"
   ]
 }
