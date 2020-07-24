@@ -1,6 +1,6 @@
 .labeling_frame {
   width: 1200px;
-
+  height: 750px;
   background-color: white;
   display: flex;
   margin: 20px auto;
@@ -9,7 +9,28 @@
 
 .labeling_frame__tools {
   width: 100px;
+  height: 750px;
   border-right: 1px solid black;
+}
+
+.labeling_frame__tools .tools_center {
+  margin-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.labeling_frame__tools .labeling_tool__drag {
+  width: 50px;
+}
+.labeling_frame__tools .labeling_tool__area {
+  width: 50px;
+  margin: 50px auto;
+}
+.labeling_frame__tools .labeling_tool__cursor {
+  width: 50px;
+  transform: rotate(270deg);
 }
 
 .labeling_frame__main {

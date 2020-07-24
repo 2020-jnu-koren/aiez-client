@@ -1,6 +1,9 @@
 import React from "react";
 import "./Train_data.css";
 import downArrow from "./img/downArrow.svg";
+import area_selection from "./img/area_selection.svg";
+import cursor from "./img/cursor.svg";
+import drag from "./img/drag.svg";
 import { Link } from "react-router-dom";
 
 class Train_data extends React.Component {
@@ -17,10 +20,17 @@ class Train_data extends React.Component {
         <main>
           <div className="labeling_frame">
             <div className="labeling_frame__tools">
-              <div className="labeling_tool_ex">화살표</div>
-              <div className="labeling_tool_ex">돋보기</div>
-              <div className="labeling_tool_ex">커서</div>
+              <div className="tools_center">
+                <img className="labeling_tool__drag" src={drag} alt="img" />
+                <img
+                  className="labeling_tool__area"
+                  src={area_selection}
+                  alt="img"
+                />
+                <img className="labeling_tool__cursor" src={cursor} alt="img" />
+              </div>
             </div>
+
             <div className="labeling_frame__main">
               <div className="labeling_img__title">
                 <img className="labeling_img__pre" src={downArrow} alt="img" />
