@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/aiez-client/static/css/main.854194ac.chunk.css",
+    "main.js": "/aiez-client/static/js/main.1966597e.chunk.js",
+    "main.js.map": "/aiez-client/static/js/main.1966597e.chunk.js.map",
+    "runtime-main.js": "/aiez-client/static/js/runtime-main.6a672411.js",
+    "runtime-main.js.map": "/aiez-client/static/js/runtime-main.6a672411.js.map",
+    "static/js/2.505a5fac.chunk.js": "/aiez-client/static/js/2.505a5fac.chunk.js",
+    "static/js/2.505a5fac.chunk.js.map": "/aiez-client/static/js/2.505a5fac.chunk.js.map",
+    "index.html": "/aiez-client/index.html",
+    "precache-manifest.23c3d14cd1207a70f5aac61319c9f4a6.js": "/aiez-client/precache-manifest.23c3d14cd1207a70f5aac61319c9f4a6.js",
+    "service-worker.js": "/aiez-client/service-worker.js",
+    "static/css/main.854194ac.chunk.css.map": "/aiez-client/static/css/main.854194ac.chunk.css.map",
+    "static/js/2.505a5fac.chunk.js.LICENSE.txt": "/aiez-client/static/js/2.505a5fac.chunk.js.LICENSE.txt",
+    "static/media/computingCloud.png": "/aiez-client/static/media/computingCloud.72f6cfe0.png",
+    "static/media/downArrow.svg": "/aiez-client/static/media/downArrow.8b44c690.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6a672411.js",
+    "static/js/2.505a5fac.chunk.js",
+    "static/css/main.854194ac.chunk.css",
+    "static/js/main.1966597e.chunk.js"
+  ]
+}
