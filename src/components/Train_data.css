@@ -1,3 +1,5 @@
+@import "reset.css";
+
 .labeling_frame {
   width: 1200px;
   height: 750px;
@@ -134,7 +136,8 @@
   justify-content: flex-end;
 }
 
-.class_create .class_create__btn {
+#class_create__btn {
+  all: unset;
   font-size: 20px;
   font-weight: 600;
   width: 150px;
@@ -149,13 +152,16 @@
 }
 
 .labeling_save {
-  margin: 20px auto;
-  width: 1200px;
+  color: inherit;
+  text-decoration: none;
 }
 
 .labeling_save .labeling_save_center {
+  width: 1200px;
+  margin: 20px auto;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .labeling_save .labeling_save__btn {

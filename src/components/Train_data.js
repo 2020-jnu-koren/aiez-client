@@ -1,12 +1,70 @@
 import React from "react";
 import "./Train_data.css";
+import "./Popup_class.css";
 import downArrow from "./img/downArrow.svg";
 import area_selection from "./img/area_selection.svg";
 import cursor from "./img/cursor.svg";
 import drag from "./img/drag.svg";
 import { Link } from "react-router-dom";
 
+class Popup_Class extends React.Component {
+  render() {
+    return (
+      <div className="popup">
+        <div className="popup_inner">
+          <div className="popup_inner__center">
+            <div className="popup_class__title">Create Class</div>
+            <div className="popup_class__main">
+              <div className="popup_class__name">
+                <div className="popup_class__name_que">Class Name :</div>
+                <div className="popup_class__name_ex">title1</div>
+              </div>
+              <div className="popup_class__description">
+                <div className="popup_class__description_que">
+                  Description :
+                </div>
+                <div className="popup_class__description_ex"></div>
+              </div>
+              <div className="popup_class__key">
+                <div className="popup_class__key_que">Hot Key :</div>
+                <div className="popup_class__key_ex">a</div>
+              </div>
+              <div className="popup_class__color">
+                <div className="popup_class__color_que">Color :</div>
+                <div className="popup_class__color_ex">
+                  <div className="popup_class__color_cir"></div>
+                  <div className="popup_class__color_txt">FF0000</div>
+                </div>
+              </div>
+              <div className="popup_class_description"></div>
+            </div>
+            <div className="class_create__close">
+              <button
+                id="class_create__close_btn"
+                onClick={this.props.closePopup}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+
 class Train_data extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      showPopup: false,
+    };
+  }
+  togglePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup,
+    });
+  }
   render() {
     return (
       <body>
@@ -65,15 +123,26 @@ class Train_data extends React.Component {
                 </div>
               </div>
               <div className="class_create">
-                <div className="class_create__btn">Create Class</div>
+                <button
+                  id="class_create__btn"
+                  onClick={this.togglePopup.bind(this)}
+                >
+                  Create Class
+                </button>
+                {this.state.showPopup ? (
+                  <Popup_Class closePopup={this.togglePopup.bind(this)} />
+                ) : null}
               </div>
             </div>
           </div>
-          <div className="labeling_save">
+          <Link
+            className="labeling_save"
+            to="/project/new_project/train_data/setting"
+          >
             <div className="labeling_save_center">
               <div className="labeling_save__btn">Save</div>
             </div>
-          </div>
+          </Link>
         </main>
       </body>
     );

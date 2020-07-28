@@ -1,6 +1,5 @@
 import React from "react";
 import "./Setting.css";
-
 import { Link } from "react-router-dom";
 
 class Setting extends React.Component {
@@ -68,6 +67,11 @@ class Setting extends React.Component {
             </div> */}
           </section>
         </main>
+        <Link className="labeling_save" to="/project/new_project/train_result">
+          <div className="labeling_save_center">
+            <div className="labeling_save__btn">Save</div>
+          </div>
+        </Link>
       </body>
     );
   }

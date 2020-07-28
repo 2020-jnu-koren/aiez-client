@@ -11,6 +11,7 @@ import Prepare_data from "./components/Prepare_data";
 import Train_data from "./components/Train_data";
 import Setting from "./components/Setting";
 import Navigation from "./components/Navigation";
+import Train_result from "./components/Train_result";
 
 function App() {
   return (
@@ -34,6 +35,10 @@ function App() {
       <Route
         path="/project/new_project/train_data/setting"
         component={Setting}
+      />
+      <Route
+        path="/project/new_project/train_result"
+        component={Train_result}
       />
     </HashRouter>
   );
