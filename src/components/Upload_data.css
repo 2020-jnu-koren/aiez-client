@@ -2,35 +2,11 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #b2d5e6;
-  margin: 0;
-  width: 100%;
-}
-
-.header {
-  display: flex;
-  align-items: center;
-  background-color: white;
-  border-top: 1px solid black;
-}
-
-.header .header__center {
-  margin: 25px auto;
-  width: 1600px;
-}
-
-.header .header__center .header__title {
-  display: flex;
-  justify-content: flex-end;
-  font-size: 23px;
-  padding-right: 110px;
-}
-
 .upload_data__title {
   color: white;
   justify-content: center;
-  margin: 20px auto;
+  margin: 0 auto;
+  padding-top: 20px;
   font-size: 50px;
   font-weight: 600;
 }

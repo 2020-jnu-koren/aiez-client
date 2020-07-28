@@ -76,73 +76,87 @@ class Train_data extends React.Component {
           </div>
         </header>
         <main>
-          <div className="labeling_frame">
-            <div className="labeling_frame__tools">
-              <div className="tools_center">
-                <img className="labeling_tool__drag" src={drag} alt="img" />
-                <img
-                  className="labeling_tool__area"
-                  src={area_selection}
-                  alt="img"
-                />
-                <img className="labeling_tool__cursor" src={cursor} alt="img" />
+          <div className="labeling">
+            <div className="labeling_frame">
+              <div className="labeling_frame__tools">
+                <div className="tools_center">
+                  <img className="labeling_tool__drag" src={drag} alt="img" />
+                  <img
+                    className="labeling_tool__area"
+                    src={area_selection}
+                    alt="img"
+                  />
+                  <img
+                    className="labeling_tool__cursor"
+                    src={cursor}
+                    alt="img"
+                  />
+                </div>
               </div>
-            </div>
 
-            <div className="labeling_frame__main">
-              <div className="labeling_img__title">
-                <img className="labeling_img__pre" src={downArrow} alt="img" />
-                <div className="labeling_img__name">Image Name</div>
-                <img className="labeling_img__next" src={downArrow} alt="img" />
+              <div className="labeling_frame__main">
+                <div className="labeling_img__title">
+                  <img
+                    className="labeling_img__pre"
+                    src={downArrow}
+                    alt="img"
+                  />
+                  <div className="labeling_img__name">Image Name</div>
+                  <img
+                    className="labeling_img__next"
+                    src={downArrow}
+                    alt="img"
+                  />
+                </div>
+                <div className="labeling_img__main"></div>
               </div>
-              <div className="labeling_img__main"></div>
-            </div>
-            <div className="labeling_data__summary">
-              <div className="labeling_dataset__title">Dataset Name</div>
-              <div className="labeling_dataset__main">
-                <div className="labeling_dataset__ex">
-                  <div className="labeling_dataset__img"></div>
-                  <div className="labeling_dataset__writing">
-                    <div className="labeling_dataset__name">image name</div>
-                    <div className="labeling_dataset__description">
-                      Description
+              <div className="labeling_data__summary">
+                <div className="labeling_dataset__title">Dataset Name</div>
+                <div className="labeling_dataset__main">
+                  <div className="labeling_dataset__ex">
+                    <div className="labeling_dataset__img"></div>
+                    <div className="labeling_dataset__writing">
+                      <div className="labeling_dataset__name">image name</div>
+                      <div className="labeling_dataset__description">
+                        Description
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div className="labeling_class__bar">
-                <div className="class_bar__color">Color</div>
-                <div className="class_bar__name">Class Name</div>
-                <div className="class_bar__key">Hot Key</div>
-              </div>
-              <div className="class_list">
-                <div className="class_list__ex">
-                  <div className="class_list__color"></div>
-                  <div className="class_list__name">title1</div>
-                  <div className="class_list__key">a</div>
+                <div className="labeling_class__bar">
+                  <div className="class_bar__color">Color</div>
+                  <div className="class_bar__name">Class Name</div>
+                  <div className="class_bar__key">Hot Key</div>
+                </div>
+                <div className="class_list">
+                  <div className="class_list__ex">
+                    <div className="class_list__color"></div>
+                    <div className="class_list__name">title1</div>
+                    <div className="class_list__key">a</div>
+                  </div>
+                </div>
+                <div className="class_create">
+                  <button
+                    id="class_create__btn"
+                    onClick={this.togglePopup.bind(this)}
+                  >
+                    Create Class
+                  </button>
+                  {this.state.showPopup ? (
+                    <Popup_Class closePopup={this.togglePopup.bind(this)} />
+                  ) : null}
                 </div>
               </div>
-              <div className="class_create">
-                <button
-                  id="class_create__btn"
-                  onClick={this.togglePopup.bind(this)}
-                >
-                  Create Class
-                </button>
-                {this.state.showPopup ? (
-                  <Popup_Class closePopup={this.togglePopup.bind(this)} />
-                ) : null}
+            </div>
+            <Link
+              className="labeling_save"
+              to="/project/new_project/train_data/setting"
+            >
+              <div className="labeling_save_center">
+                <div className="labeling_save__btn">Save</div>
               </div>
-            </div>
+            </Link>
           </div>
-          <Link
-            className="labeling_save"
-            to="/project/new_project/train_data/setting"
-          >
-            <div className="labeling_save_center">
-              <div className="labeling_save__btn">Save</div>
-            </div>
-          </Link>
         </main>
       </body>
     );

@@ -1,11 +1,14 @@
 @import "reset.css";
 
+.labeling {
+  padding-top: 20px;
+}
 .labeling_frame {
   width: 1200px;
   height: 750px;
   background-color: white;
   display: flex;
-  margin: 20px auto;
+  margin: 0px auto;
   border: 3px solid black;
 }
 
