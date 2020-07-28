@@ -15,11 +15,11 @@ class Prepare_data extends React.Component {
             </div>
           </header>
           <main>
-            <div className="my_library">My library</div>
+            <div className="my_library">My Library</div>
             <div className="library_list">
               <Link
                 className="library_list_ex"
-                to="/project/new_project/train_data"
+                to="/project/new_project/labeling"
               >
                 <div className="library_list__num">500</div>
                 <div className="library_list__title">dataset1</div>

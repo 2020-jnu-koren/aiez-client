@@ -9,6 +9,7 @@ import More_models from "./components/More_models";
 import Upload_data from "./components/Upload_data";
 import Prepare_data from "./components/Prepare_data";
 import Train_data from "./components/Train_data";
+import Labeling from "./components/Labeling";
 import Setting from "./components/Setting";
 import Navigation from "./components/Navigation";
 import Train_result from "./components/Train_result";
@@ -31,6 +32,11 @@ function App() {
         path="/project/new_project/train_data"
         exact={true}
         component={Train_data}
+      />
+      <Route
+        path="/project/new_project/labeling"
+        exact={true}
+        component={Labeling}
       />
       <Route
         path="/project/new_project/train_data/setting"
