@@ -1,8 +1,25 @@
 import React from "react";
 import "./Setting.css";
+import ParameterForm from "./ParameterForm";
 import { Link } from "react-router-dom";
 
 class Setting extends React.Component {
+  state = {
+    epoch: "",
+    batch_size: "",
+    iteration: "",
+  };
+
+  handleCreate = (data) => {
+    this.setState({
+      epoch: data.epoch,
+      batch_size: data.batch_size,
+      iteration: data.iteration,
+    });
+    localStorage.setItem("epoch", data.epoch);
+    localStorage.setItem("batch_size", data.batch_size);
+    localStorage.setItem("iteration", data.iteration);
+  };
   render() {
     return (
       <body>
@@ -28,50 +45,25 @@ class Setting extends React.Component {
             <div className="Setting_column">
               <div className="Training_Tool">내리면서 고르는거</div>
               <div className="Parameter_Setting">
-                <ul ClassName="Setting_lists">
+                <ul className="Setting_lists">
                   <li className="Setting_list">
                     <div className="Setting_item">Epoch</div>
-                    <div className="Setting_input">input창</div>
                   </li>
                   <li className="Setting_list">
                     <div className="Setting_item">Batch Size</div>
-                    <div className="Setting_input">input창</div>
                   </li>
                   <li className="Setting_list">
                     <div className="Setting_item">Iteration</div>
-                    <div className="Setting_input">input창</div>
                   </li>
                 </ul>
+                <div>
+                  <ParameterForm onCreate={this.handleCreate} />
+                  {/* <ParameterForm onCreate={this.handleCreate} /> */}
+                </div>
               </div>
             </div>
-            {/* <div className="Setting_select_1">
-              <div className="Setting_item_Big">Training Tool</div>
-              <div>내리면서 고르는거</div>
-            </div>
-            <div className="Setting_select_2">
-              <div className="Setting_item_Big">Parmeter Setting</div>
-              <ul classNKame="Setting_items">
-                <li className="Setting_list">
-                  <div className="Setting_item">Epoch :</div>
-                  <div>input창</div>
-                </li>
-                <li className="Setting_list">
-                  <div className="Setting_item">Batch Size :</div>
-                  <div>input창</div>
-                </li>
-                <li className="Setting_list">
-                  <div className="Setting_item">Iteration :</div>
-                  <div>input창</div>
-                </li>
-              </ul>
-            </div> */}
           </section>
         </main>
-        <Link className="labeling_save" to="/project/new_project/train_result">
-          <div className="labeling_save_center">
-            <div className="labeling_save__btn">Save</div>
-          </div>
-        </Link>
       </body>
     );
   }

@@ -42,6 +42,9 @@
   margin-bottom: 30px;
 }
 
+.Parameter_Setting {
+  display: flex;
+}
 .Setting_item {
   width: 220px;
   font-size: 30px;
@@ -49,8 +52,14 @@
   margin-bottom: 20px;
 }
 
+.Setting_inputs {
+  display: flex;
+  flex-direction: column;
+}
+
 .Setting_input {
   width: 200px;
   height: 30px;
   background-color: white;
+  margin-bottom: 20px;
 }

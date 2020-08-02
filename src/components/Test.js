@@ -1,4 +1,5 @@
 import React from "react";
+import "./Test.css";
 import "./Labeling.css";
 import "./Popup_class.css";
 import downArrow from "./img/downArrow.svg";
@@ -53,12 +54,13 @@ class Popup_Class extends React.Component {
   }
 }
 
-class Labeling extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      showPopup: false,
-    };
+class Test extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { x: 0, y: 0, showPoput: false };
+  }
+  onMouseMove(e) {
+    this.setState({ x: e.nativeEvent.offsetX, y: e.nativeEvent.offsetY });
   }
   togglePopup() {
     this.setState({
@@ -66,13 +68,12 @@ class Labeling extends React.Component {
     });
   }
   render() {
+    const { x, y } = this.state;
     return (
       <body>
         <header className="header">
           <div className="header__center">
-            <div className="header__title">
-              Home > Project > New project > Prepare Dataset
-            </div>
+            <div className="header__title">Test</div>
           </div>
         </header>
         <main>
@@ -93,6 +94,7 @@ class Labeling extends React.Component {
                   />
                 </div>
               </div>
+
               <div className="labeling_frame__main">
                 <div className="labeling_img__title">
                   <img
@@ -107,7 +109,13 @@ class Labeling extends React.Component {
                     alt="img"
                   />
                 </div>
-                <div className="labeling_img__main"></div>
+                <div className="labeling_img__main">
+                  <img
+                    className="labeling_img__main_img"
+                    onClick={this.onMouseMove.bind(this)}
+                    src="http://www.mariogiannini.com/wp-content/uploads/2017/10/Photo-200x300.jpg"
+                  />
+                </div>
               </div>
               <div className="labeling_data__summary">
                 <div className="labeling_dataset__title">Dataset Name</div>
@@ -157,9 +165,15 @@ class Labeling extends React.Component {
             </Link>
           </div>
         </main>
+        <div className="container">
+          <div></div>
+          <h1>
+            {x} {y}
+          </h1>
+        </div>
       </body>
     );
   }
 }
 
-export default Labeling;
+export default Test;

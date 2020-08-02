@@ -13,6 +13,7 @@ import Labeling from "./components/Labeling";
 import Setting from "./components/Setting";
 import Navigation from "./components/Navigation";
 import Train_result from "./components/Train_result";
+import Test from "./components/Test";
 
 function App() {
   return (
@@ -46,6 +47,7 @@ function App() {
         path="/project/new_project/train_result"
         component={Train_result}
       />
+      <Route path="/project/test" component={Test} />
     </HashRouter>
   );
 }

@@ -3,6 +3,13 @@ import "./Train_result.css";
 import { Link } from "react-router-dom";
 
 class Train_result extends React.Component {
+  init = () => {
+    //LocalStorage 데이터 취득 방법 3가지
+    var val = localStorage.getItem("Test");
+    //취득 데이터 출력
+    document.querySelector("#result").innerHTML = val;
+  };
+
   render() {
     return (
       <body>
@@ -18,6 +25,7 @@ class Train_result extends React.Component {
           </div>
           <div className="result_classes"></div>
         </main>
+        <input value={localStorage.getItem("epoch")}></input>
       </body>
     );
   }

@@ -1,0 +1,10 @@
+.labeling_img__main {
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.labeling_img__main .labeling_img__main_img {
+  cursor: crosshair;
+}
