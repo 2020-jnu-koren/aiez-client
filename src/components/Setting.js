@@ -1,21 +1,11 @@
 import React from "react";
 import "./Setting.css";
-import ParameterForm from "./ParameterForm";
+import ParameterForm from "./ParameterForm.js";
+import SplitButton from "./SplitButton.js";
 import { Link } from "react-router-dom";
 
 class Setting extends React.Component {
-  state = {
-    epoch: "",
-    batch_size: "",
-    iteration: "",
-  };
-
   handleCreate = (data) => {
-    this.setState({
-      epoch: data.epoch,
-      batch_size: data.batch_size,
-      iteration: data.iteration,
-    });
     localStorage.setItem("epoch", data.epoch);
     localStorage.setItem("batch_size", data.batch_size);
     localStorage.setItem("iteration", data.iteration);
@@ -43,7 +33,9 @@ class Setting extends React.Component {
               <div className="Setting_big_item">Parameter Setting</div>
             </div>
             <div className="Setting_column">
-              <div className="Training_Tool">내리면서 고르는거</div>
+              <div className="Training_Tool">
+                <SplitButton />
+              </div>
               <div className="Parameter_Setting">
                 <ul className="Setting_lists">
                   <li className="Setting_list">

@@ -1,6 +1,7 @@
 .WhatToDo {
   width: 1300px;
-  margin: 40px auto;
+  margin: 0px auto;
+  padding: 40px 0px;
 }
 
 .WTD_Eng {
@@ -38,7 +39,7 @@
 }
 
 .Training_Tool {
-  font-size: 30px;
+  padding-left: 220px;
   margin-bottom: 30px;
 }
 
