@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/aiez-client/precache-manifest.69a9d81795ac748e58ebad2f9412ddc3.js"
+  "/aiez-client/precache-manifest.c5d855a26afab8c254525766a06c35b2.js"
 );
 
 self.addEventListener('message', (event) => {
