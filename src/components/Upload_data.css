@@ -19,7 +19,7 @@
   margin: 20px auto;
 }
 
-.upload_data__box {
+.dropzone {
   display: flex;
   margin: 50px auto;
   width: 900px;

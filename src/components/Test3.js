@@ -1,4 +1,5 @@
 import React from "react";
+import "./Test.css";
 import "./Labeling.css";
 import "./Popup_class.css";
 import downArrow from "./img/downArrow.svg";
@@ -6,7 +7,19 @@ import area_selection from "./img/area_selection.svg";
 import cursor from "./img/cursor.svg";
 import drag from "./img/drag.svg";
 import { Link } from "react-router-dom";
-import { Annotator } from "image-labeler-react";
+import Test2 from "./Test2.js";
+import classNames from "classnames";
+import Dropzone from "react-dropzone";
+import ReactCrop from "react-image-crop";
+import "./cutom-image-crop.css";
+import { image64toCanvasRef } from "./ResuableUtils";
+
+const imageMaxSize = 10000000; //bytes
+const acceptedFileTypes =
+  "image/x-png, image/png, image/jpg, image/jpeg, image/gif";
+const acceptedFileTypesArray = acceptedFileTypes.split(",").map((item) => {
+  return item.trim();
+});
 
 class Popup_Class extends React.Component {
   render() {
@@ -54,22 +67,83 @@ class Popup_Class extends React.Component {
   }
 }
 
-class Labeling extends React.Component {
+class Test extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { showPoput: false };
+    this.imagePreviewCanvasRef = React.createRef();
+    this.state = {
+      showPoput: false,
+      imgSrc: null,
+      crop: {
+        aspect: 1 / 1,
+      },
+    };
   }
   togglePopup() {
     this.setState({
       showPopup: !this.state.showPopup,
     });
   }
+  verifyFile = (files) => {
+    if (files && files.length > 0) {
+      const currentFile = files[0];
+      const currentFileType = currentFile.type;
+      const currentFileSize = currentFile.size;
+      if (currentFileSize > imageMaxSize) {
+        alert(
+          "이 파일은 허용되지 않습니다." +
+            imageMaxSize +
+            "bytes이하의 파일을 업로드해주세요."
+        );
+        return false;
+      }
+      if (!acceptedFileTypesArray.includes(currentFileType)) {
+        alert("이미지 파일만 업로드 가능합니다.");
+        return false;
+      }
+      return true;
+    }
+  };
+  handleOnDrop = (files, rejectedFiles) => {
+    if (rejectedFiles && rejectedFiles.length > 0) {
+      this.verifyFile(rejectedFiles);
+    }
+    if (files && files.length > 0) {
+      const isVerified = this.verifyFile(files);
+      if (isVerified) {
+        //imageBase64Data
+        const currentFile = files[0];
+        const MyFileItemReader = new FileReader();
+        MyFileItemReader.addEventListener(
+          "load",
+          () => {
+            console.log(MyFileItemReader.result);
+            this.setState({
+              imgSrc: MyFileItemReader.result,
+            });
+          },
+          false
+        );
+        MyFileItemReader.readAsDataURL(currentFile);
+      }
+    }
+  };
+  handleImageLoaded = (image) => {
+    //console.log(image)
+  };
+  handleOnCropChange = (crop) => {
+    this.setState({ crop: crop });
+  };
+  handleOnCropComplete = (crop, pixelCrop) => {
+    console.log(crop, pixelCrop);
+  };
   render() {
+    const { imgSrc } = this.state;
     return (
       <body>
         <header className="header">
           <div className="header__center">
-            <div className="header__title">Labeling</div>
+            <div className="header__title">Test</div>
           </div>
         </header>
         <main>
@@ -90,7 +164,6 @@ class Labeling extends React.Component {
                   />
                 </div>
               </div>
-
               <div className="labeling_frame__main">
                 <div className="labeling_img__title">
                   <img
@@ -106,16 +179,48 @@ class Labeling extends React.Component {
                   />
                 </div>
                 <div className="labeling_img__main">
-                  <Annotator
-                    height={600}
-                    width={600}
-                    imageUrl={""}
-                    asyncUpload={async (labeledData) => {
-                      // upload labeled data
-                    }}
-                    types={["A", "B", "Cylinder"]}
-                    defaultType={"Cylinder"}
-                  />
+                  <div>
+                    {imgSrc !== null ? (
+                      <div>
+                        <ReactCrop
+                          src={imgSrc}
+                          crop={this.state.crop}
+                          onImageLoaded={this.handleOnCropChange}
+                          onComplete={this.handleOnCropComplete}
+                          onChange={this.handleOnCropChange}
+                        />
+                        <br />
+                        <p>Preview Canvas Crop</p>
+                        <canvas ref={this.imagePreviewCanvas}></canvas>
+                      </div>
+                    ) : (
+                      <Dropzone
+                        onDrop={this.handleOnDrop}
+                        accept={acceptedFileTypes}
+                      >
+                        {({ getRootProps, getInputProps, isDragActive }) => {
+                          return (
+                            <div
+                              {...getRootProps()}
+                              className={classNames("dropzone", {
+                                "dropzone--isActive": isDragActive,
+                              })}
+                            >
+                              <input {...getInputProps()} />
+                              {isDragActive ? (
+                                <p>Drop files here...</p>
+                              ) : (
+                                <p>
+                                  Try dropping some files here, or click to
+                                  select files to upload.
+                                </p>
+                              )}
+                            </div>
+                          );
+                        }}
+                      </Dropzone>
+                    )}
+                  </div>
                 </div>
               </div>
               <div className="labeling_data__summary">
@@ -166,9 +271,13 @@ class Labeling extends React.Component {
             </Link>
           </div>
         </main>
+        <div className="container">
+          <div></div>
+        </div>
+        <Test2 />
       </body>
     );
   }
 }
 
-export default Labeling;
+export default Test;

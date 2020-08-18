@@ -10,7 +10,7 @@ class Train_data extends React.Component {
           <header className="header">
             <div className="header__center">
               <div className="header__title">
-                Home > Project > New project > Train Dataset
+                Home Project New project Train Dataset
               </div>
             </div>
           </header>

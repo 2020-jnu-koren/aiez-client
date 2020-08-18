@@ -15,7 +15,7 @@ class Train_result extends React.Component {
       <body>
         <header className="header">
           <div className="header__center">
-            <div className="header__title">Home > Project</div>
+            <div className="header__title">Home Project</div>
           </div>
         </header>
         <main>

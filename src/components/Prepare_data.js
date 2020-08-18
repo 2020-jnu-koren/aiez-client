@@ -10,7 +10,7 @@ class Prepare_data extends React.Component {
           <header className="header">
             <div className="header__center">
               <div className="header__title">
-                Home > Project > New project > Prepare Dataset
+                Home Project New project Prepare Dataset
               </div>
             </div>
           </header>

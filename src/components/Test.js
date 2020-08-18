@@ -7,6 +7,7 @@ import area_selection from "./img/area_selection.svg";
 import cursor from "./img/cursor.svg";
 import drag from "./img/drag.svg";
 import { Link } from "react-router-dom";
+import { Annotator } from "image-labeler-react";
 
 class Popup_Class extends React.Component {
   render() {
@@ -110,10 +111,15 @@ class Test extends React.Component {
                   />
                 </div>
                 <div className="labeling_img__main">
-                  <img
-                    className="labeling_img__main_img"
-                    onClick={this.onMouseMove.bind(this)}
-                    src="http://www.mariogiannini.com/wp-content/uploads/2017/10/Photo-200x300.jpg"
+                  <Annotator
+                    height={600}
+                    width={600}
+                    imageUrl={""}
+                    asyncUpload={async (labeledData) => {
+                      // upload labeled data
+                    }}
+                    types={["A", "B", "Cylinder"]}
+                    defaultType={"Cylinder"}
                   />
                 </div>
               </div>

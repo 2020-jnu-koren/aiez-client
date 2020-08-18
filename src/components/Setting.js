@@ -16,7 +16,7 @@ class Setting extends React.Component {
         <header className="header">
           <div className="header__center">
             <div className="header__title">
-              Home > Project > New project > Setting
+              Home Project New project Setting
             </div>
           </div>
         </header>
@@ -50,7 +50,6 @@ class Setting extends React.Component {
                 </ul>
                 <div>
                   <ParameterForm onCreate={this.handleCreate} />
-                  {/* <ParameterForm onCreate={this.handleCreate} /> */}
                 </div>
               </div>
             </div>
