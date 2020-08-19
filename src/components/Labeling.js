@@ -1,63 +1,17 @@
 import React from "react";
 import "./Labeling.css";
-import "./Popup_class.css";
 import downArrow from "./img/downArrow.svg";
 import area_selection from "./img/area_selection.svg";
 import cursor from "./img/cursor.svg";
 import drag from "./img/drag.svg";
 import { Link } from "react-router-dom";
 import { Annotator } from "image-labeler-react";
-
-class Popup_Class extends React.Component {
-  render() {
-    return (
-      <div className="popup">
-        <div className="popup_inner">
-          <div className="popup_inner__center">
-            <div className="popup_class__title">Create Class</div>
-            <div className="popup_class__main">
-              <div className="popup_class__name">
-                <div className="popup_class__name_que">Class Name :</div>
-                <div className="popup_class__name_ex">title1</div>
-              </div>
-              <div className="popup_class__description">
-                <div className="popup_class__description_que">
-                  Description :
-                </div>
-                <div className="popup_class__description_ex"></div>
-              </div>
-              <div className="popup_class__key">
-                <div className="popup_class__key_que">Hot Key :</div>
-                <div className="popup_class__key_ex">a</div>
-              </div>
-              <div className="popup_class__color">
-                <div className="popup_class__color_que">Color :</div>
-                <div className="popup_class__color_ex">
-                  <div className="popup_class__color_cir"></div>
-                  <div className="popup_class__color_txt">FF0000</div>
-                </div>
-              </div>
-              <div className="popup_class_description"></div>
-            </div>
-            <div className="class_create__close">
-              <button
-                id="class_create__close_btn"
-                onClick={this.props.closePopup}
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
+import Popup_Class from "./Popup_Class.js";
 
 class Labeling extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { showPoput: false };
+    this.state = { showPopup: false };
   }
   togglePopup() {
     this.setState({
@@ -109,7 +63,9 @@ class Labeling extends React.Component {
                   <Annotator
                     height={600}
                     width={600}
-                    imageUrl={""}
+                    imageUrl={
+                      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTgolBdeaXdt7hZ4G28YiA8shOCg4jkBg08uA&usqp=CAU"
+                    }
                     asyncUpload={async (labeledData) => {
                       // upload labeled data
                     }}
@@ -156,14 +112,16 @@ class Labeling extends React.Component {
                 </div>
               </div>
             </div>
-            <Link
-              className="labeling_save"
-              to="/project/new_project/train_data/setting"
-            >
+            <div className="labeling_save">
               <div className="labeling_save_center">
-                <div className="labeling_save__btn">Save</div>
+                <Link
+                  className="labeling_save__btn"
+                  to="/project/new_project/train_data/setting"
+                >
+                  Save
+                </Link>
               </div>
-            </Link>
+            </div>
           </div>
         </main>
       </body>

@@ -140,11 +140,11 @@
   width: 300px;
   display: flex;
   justify-content: flex-end;
-  cursor: pointer;
 }
 
 #class_create__btn {
   all: unset;
+  cursor: pointer;
   font-size: 20px;
   font-weight: 600;
   width: 150px;
@@ -156,11 +156,6 @@
   background-color: #eecd59;
   margin-right: 10px;
   margin-bottom: 10px;
-}
-
-.labeling_save {
-  color: inherit;
-  text-decoration: none;
 }
 
 .labeling_save .labeling_save_center {
@@ -181,4 +176,6 @@
   align-items: center;
   font-size: 25px;
   font-weight: 600;
+  color: inherit;
+  text-decoration: none;
 }
