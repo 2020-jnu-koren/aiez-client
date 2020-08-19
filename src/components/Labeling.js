@@ -6,7 +6,9 @@ import cursor from "./img/cursor.svg";
 import drag from "./img/drag.svg";
 import { Link } from "react-router-dom";
 import { Annotator } from "image-labeler-react";
+import InputColor from "react-input-color";
 import Popup_Class from "./Popup_Class.js";
+import Test from "./Test.js";
 
 class Labeling extends React.Component {
   constructor(props) {
@@ -18,6 +20,7 @@ class Labeling extends React.Component {
       showPopup: !this.state.showPopup,
     });
   }
+
   render() {
     return (
       <body>
@@ -124,6 +127,7 @@ class Labeling extends React.Component {
             </div>
           </div>
         </main>
+        <Test></Test>
       </body>
     );
   }
