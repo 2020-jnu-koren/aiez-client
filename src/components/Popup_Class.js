@@ -1,7 +1,30 @@
 import React from "react";
-import "./Popup_class.css";
+import "./Popup_Class.css";
+import InputColor from "react-input-color";
+
+function Color_Setting(color_state) {
+  const [color, setColor] = React.useState({});
+  return (
+    <div>
+      <InputColor
+        className="class_color__input"
+        initialValue="#ff0000"
+        onChange={setColor}
+        placement="right"
+      />
+    </div>
+  );
+}
 
 class Popup_Class extends React.Component {
+  state = {
+    color_state: "FF0000",
+  };
+  handleChange = (e) => {
+    this.setState({
+      [e.target.name]: parseInt(e.target.value),
+    }); //치는거 바뀔떄마다 데이터 변경
+  };
   render() {
     return (
       <div className="popup">
@@ -17,17 +40,23 @@ class Popup_Class extends React.Component {
                 <div className="popup_class__description_que">
                   Description :
                 </div>
-                <div className="popup_class__description_ex"></div>
+                <input className="popup_class__description_ex" />
               </div>
               <div className="popup_class__key">
                 <div className="popup_class__key_que">Hot Key :</div>
-                <div className="popup_class__key_ex">a</div>
+                <input value="a" className="popup_class__key_ex" />
               </div>
               <div className="popup_class__color">
                 <div className="popup_class__color_que">Color :</div>
                 <div className="popup_class__color_ex">
-                  <div className="popup_class__color_cir"></div>
-                  <div className="popup_class__color_txt">FF0000</div>
+                  <div className="popup_class__color_cir">
+                    <Color_Setting />
+                  </div>
+                  <input
+                    value={this.state.color_state}
+                    type="text"
+                    className="popup_class__color_txt"
+                  />
                 </div>
               </div>
               <div className="popup_class_description"></div>
