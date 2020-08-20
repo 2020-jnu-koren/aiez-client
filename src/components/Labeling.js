@@ -69,8 +69,8 @@ class Labeling extends React.Component {
                     asyncUpload={async (labeledData) => {
                       // upload labeled data
                     }}
-                    types={["A", "B", "Cylinder"]}
-                    defaultType={"Cylinder"}
+                    types={["A", "B", "C"]}
+                    defaultType={"A"}
                   />
                 </div>
               </div>
