@@ -1,28 +1,32 @@
 {
   "files": {
-    "main.css": "/aiez-client/static/css/main.10385cc9.chunk.css",
-    "main.js": "/aiez-client/static/js/main.63f3d915.chunk.js",
-    "main.js.map": "/aiez-client/static/js/main.63f3d915.chunk.js.map",
-    "runtime-main.js": "/aiez-client/static/js/runtime-main.6a672411.js",
-    "runtime-main.js.map": "/aiez-client/static/js/runtime-main.6a672411.js.map",
-    "static/js/2.3cc286ff.chunk.js": "/aiez-client/static/js/2.3cc286ff.chunk.js",
-    "static/js/2.3cc286ff.chunk.js.map": "/aiez-client/static/js/2.3cc286ff.chunk.js.map",
+    "main.css": "/aiez-client/static/css/main.42a61695.chunk.css",
+    "main.js": "/aiez-client/static/js/main.ad6c6903.chunk.js",
+    "main.js.map": "/aiez-client/static/js/main.ad6c6903.chunk.js.map",
+    "runtime-main.js": "/aiez-client/static/js/runtime-main.5fa4fdcd.js",
+    "runtime-main.js.map": "/aiez-client/static/js/runtime-main.5fa4fdcd.js.map",
+    "static/css/2.8718dd3e.chunk.css": "/aiez-client/static/css/2.8718dd3e.chunk.css",
+    "static/js/2.4a4dc0d2.chunk.js": "/aiez-client/static/js/2.4a4dc0d2.chunk.js",
+    "static/js/2.4a4dc0d2.chunk.js.map": "/aiez-client/static/js/2.4a4dc0d2.chunk.js.map",
     "index.html": "/aiez-client/index.html",
-    "precache-manifest.c5d855a26afab8c254525766a06c35b2.js": "/aiez-client/precache-manifest.c5d855a26afab8c254525766a06c35b2.js",
+    "precache-manifest.2c4a4f0fb3dcace448bb2ba7045fb3b7.js": "/aiez-client/precache-manifest.2c4a4f0fb3dcace448bb2ba7045fb3b7.js",
     "service-worker.js": "/aiez-client/service-worker.js",
-    "static/css/main.10385cc9.chunk.css.map": "/aiez-client/static/css/main.10385cc9.chunk.css.map",
-    "static/js/2.3cc286ff.chunk.js.LICENSE.txt": "/aiez-client/static/js/2.3cc286ff.chunk.js.LICENSE.txt",
+    "static/css/2.8718dd3e.chunk.css.map": "/aiez-client/static/css/2.8718dd3e.chunk.css.map",
+    "static/css/main.42a61695.chunk.css.map": "/aiez-client/static/css/main.42a61695.chunk.css.map",
+    "static/js/2.4a4dc0d2.chunk.js.LICENSE.txt": "/aiez-client/static/js/2.4a4dc0d2.chunk.js.LICENSE.txt",
     "static/media/area_selection.svg": "/aiez-client/static/media/area_selection.b9284b16.svg",
     "static/media/background.jpg": "/aiez-client/static/media/background.68a7d581.jpg",
+    "static/media/bg.png": "/aiez-client/static/media/bg.c7b1c1c2.png",
     "static/media/computingCloud.png": "/aiez-client/static/media/computingCloud.72f6cfe0.png",
     "static/media/cursor.svg": "/aiez-client/static/media/cursor.17bff56d.svg",
     "static/media/downArrow.svg": "/aiez-client/static/media/downArrow.8b44c690.svg",
     "static/media/drag.svg": "/aiez-client/static/media/drag.e49f23b6.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.6a672411.js",
-    "static/js/2.3cc286ff.chunk.js",
-    "static/css/main.10385cc9.chunk.css",
-    "static/js/main.63f3d915.chunk.js"
+    "static/js/runtime-main.5fa4fdcd.js",
+    "static/css/2.8718dd3e.chunk.css",
+    "static/js/2.4a4dc0d2.chunk.js",
+    "static/css/main.42a61695.chunk.css",
+    "static/js/main.ad6c6903.chunk.js"
   ]
 }
