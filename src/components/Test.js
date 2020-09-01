@@ -1,9 +1,37 @@
 import React from "react";
-import InputColor from "react-input-color";
+import axios from "axios";
+import "./Test.css";
+import { Link } from "react-router-dom";
 
 class Test extends React.Component {
+  state = {
+    isLoading: true,
+    users: [],
+  };
+  getUsers = async () => {
+    const {
+      data: {
+        data: { users },
+      },
+    } = await axios({
+      method: "get",
+      url: "http://bit.ly/2mTM3nY",
+    });
+  };
+
   render() {
-    return <div></div>;
+    return (
+      <body>
+        <header className="header">
+          <div className="header__center">
+            <div className="header__title"> Test </div>
+          </div>
+        </header>
+        <main>
+          <div> </div>
+        </main>
+      </body>
+    );
   }
 }
 

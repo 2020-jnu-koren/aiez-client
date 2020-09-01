@@ -93,7 +93,6 @@ class ParameterForm extends Component {
             <input
               value={this.state.batch_size}
               onChange={this.handleChange}
-              // onChange={this.handleChange}
               name="batch_size"
               className="Setting_input"
             />
@@ -118,7 +117,6 @@ class ParameterForm extends Component {
             <input
               value={this.state.iteration}
               onChange={this.handleChange}
-              // onChange={this.handleChange}
               name="iteration"
               className="Setting_input"
             />

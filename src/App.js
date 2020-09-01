@@ -2,6 +2,7 @@ import React from "react";
 import { HashRouter, Route } from "react-router-dom";
 import "./App.css";
 import Home from "./components/Home";
+import Login from "./components/Login";
 import About from "./components/About";
 import Project from "./components/Project";
 import New_project from "./components/New_project";
@@ -20,6 +21,7 @@ function App() {
     <HashRouter>
       <Navigation />
       <Route path="/" exact={true} component={Home} />
+      <Route path="/login" exact={true} component={Login} />
       <Route path="/about" component={About} />
       <Route path="/project" exact={true} component={Project} />
       <Route path="/project/new_project" exact={true} component={New_project} />
