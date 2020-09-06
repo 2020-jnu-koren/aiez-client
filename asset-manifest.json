@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/aiez-client/static/css/main.0e937f68.chunk.css",
+    "main.css": "/aiez-client/static/css/main.8f7aaf21.chunk.css",
     "main.js": "/aiez-client/static/js/main.08690901.chunk.js",
     "main.js.map": "/aiez-client/static/js/main.08690901.chunk.js.map",
     "runtime-main.js": "/aiez-client/static/js/runtime-main.5fa4fdcd.js",
@@ -9,10 +9,10 @@
     "static/js/2.40b446ea.chunk.js": "/aiez-client/static/js/2.40b446ea.chunk.js",
     "static/js/2.40b446ea.chunk.js.map": "/aiez-client/static/js/2.40b446ea.chunk.js.map",
     "index.html": "/aiez-client/index.html",
-    "precache-manifest.ae0856cc2c1189b1a2c5e9079259d907.js": "/aiez-client/precache-manifest.ae0856cc2c1189b1a2c5e9079259d907.js",
+    "precache-manifest.3977f56d0fe14db7f4bf4d00453d6a51.js": "/aiez-client/precache-manifest.3977f56d0fe14db7f4bf4d00453d6a51.js",
     "service-worker.js": "/aiez-client/service-worker.js",
     "static/css/2.8718dd3e.chunk.css.map": "/aiez-client/static/css/2.8718dd3e.chunk.css.map",
-    "static/css/main.0e937f68.chunk.css.map": "/aiez-client/static/css/main.0e937f68.chunk.css.map",
+    "static/css/main.8f7aaf21.chunk.css.map": "/aiez-client/static/css/main.8f7aaf21.chunk.css.map",
     "static/js/2.40b446ea.chunk.js.LICENSE.txt": "/aiez-client/static/js/2.40b446ea.chunk.js.LICENSE.txt",
     "static/media/area_selection.svg": "/aiez-client/static/media/area_selection.b9284b16.svg",
     "static/media/background.jpg": "/aiez-client/static/media/background.68a7d581.jpg",
@@ -26,7 +26,7 @@
     "static/js/runtime-main.5fa4fdcd.js",
     "static/css/2.8718dd3e.chunk.css",
     "static/js/2.40b446ea.chunk.js",
-    "static/css/main.0e937f68.chunk.css",
+    "static/css/main.8f7aaf21.chunk.css",
     "static/js/main.08690901.chunk.js"
   ]
 }
