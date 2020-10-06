@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "18dd3783f05270c0cf2f8fb6428e7778",
+    "revision": "ee44f9d44bd7f3448144e6c37b4a1012",
     "url": "/aiez-client/index.html"
   },
   {
-    "revision": "80ab132c7f021f6bff00",
+    "revision": "519ade8280968bf0a102",
     "url": "/aiez-client/static/css/2.8718dd3e.chunk.css"
   },
   {
-    "revision": "fe7bc0ebe778cb10bd58",
-    "url": "/aiez-client/static/css/main.8f7aaf21.chunk.css"
+    "revision": "87a525aae9fbc42160d2",
+    "url": "/aiez-client/static/css/main.92fb8056.chunk.css"
   },
   {
-    "revision": "80ab132c7f021f6bff00",
-    "url": "/aiez-client/static/js/2.40b446ea.chunk.js"
+    "revision": "519ade8280968bf0a102",
+    "url": "/aiez-client/static/js/2.75305c87.chunk.js"
   },
   {
     "revision": "d50512915a9d93353b354eb67f2df637",
-    "url": "/aiez-client/static/js/2.40b446ea.chunk.js.LICENSE.txt"
+    "url": "/aiez-client/static/js/2.75305c87.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fe7bc0ebe778cb10bd58",
-    "url": "/aiez-client/static/js/main.e7e8c744.chunk.js"
+    "revision": "87a525aae9fbc42160d2",
+    "url": "/aiez-client/static/js/main.c7c590c0.chunk.js"
   },
   {
     "revision": "a89d54c0e5441ce8056d",
@@ -40,10 +40,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aiez-client/static/media/bg.c7b1c1c2.png"
   },
   {
-    "revision": "72f6cfe0fbe8b3a583c2d619f1126b2a",
-    "url": "/aiez-client/static/media/computingCloud.72f6cfe0.png"
-  },
-  {
     "revision": "17bff56d3aa820d53b7a65fc943b5f85",
     "url": "/aiez-client/static/media/cursor.17bff56d.svg"
   },
@@ -54,5 +50,17 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "e49f23b67a53743f28eecdf9c6a21550",
     "url": "/aiez-client/static/media/drag.e49f23b6.svg"
+  },
+  {
+    "revision": "88e4b7398f007f81b1f9d2394e74ef13",
+    "url": "/aiez-client/static/media/labeling.88e4b739.jpg"
+  },
+  {
+    "revision": "f329c3dbe3d52cc3310cfdb3ada0bb61",
+    "url": "/aiez-client/static/media/lastone.f329c3db.jpg"
+  },
+  {
+    "revision": "e26d72940bc883e2ec0ccddef55c9b84",
+    "url": "/aiez-client/static/media/upload.e26d7294.jpg"
   }
 ]);
