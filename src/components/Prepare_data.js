@@ -1,6 +1,7 @@
 import React from "react";
 import "./Prepare_data.css";
 import { Link } from "react-router-dom";
+import banana1 from "./img/labeling_img/banana1.jpg";
 
 class Prepare_data extends React.Component {
   render() {
@@ -10,20 +11,25 @@ class Prepare_data extends React.Component {
           <header className="header">
             <div className="header__center">
               <div className="header__title">
-                Home Project New project Prepare Dataset
+                Home / Project / New project / Prepare / Dataset
               </div>
             </div>
           </header>
           <main>
             <div className="my_library">My Library</div>
             <div className="library_list">
-              <Link
-                className="library_list_ex"
-                to="/project/new_project/labeling"
-              >
-                <div className="library_list__num">500</div>
-                <div className="library_list__title">dataset1</div>
-              </Link>
+              <div className="library_list_box">
+                <Link
+                  className="library_list_ex"
+                  to="/project/new_project/labeling"
+                >
+                  <img src={banana1} id="library_list__size"></img>
+                  <div className="library_ex__title">
+                    <div className="library_list__title">banana</div>
+                    <div className="library_list__size">10</div>
+                  </div>
+                </Link>
+              </div>
             </div>
           </main>
         </body>

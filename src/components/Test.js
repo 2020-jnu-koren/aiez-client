@@ -24,11 +24,11 @@ class Test extends React.Component {
       <body>
         <header className="header">
           <div className="header__center">
-            <div className="header__title"> Test </div>
+            <div className="header__title">Test</div>
           </div>
         </header>
         <main>
-          <div> </div>
+          <div></div>
         </main>
       </body>
     );

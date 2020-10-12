@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+
 import "./ParameterForm.css";
 
 // import Counter from "./Counter.js";
@@ -19,7 +19,7 @@ class ParameterForm extends Component {
     e.preventDefault(); //페이지 리로딩 방지
     this.props.onCreate(this.state); //props로 받은 onCreate 호출
     window.location.href =
-      "http://localhost:3000/aiez#/project/new_project/train_result";
+      "http://localhost:3000/aiez#/project/new_project/train";
   };
 
   handleIncrease = (e) => {
@@ -93,6 +93,7 @@ class ParameterForm extends Component {
             <input
               value={this.state.batch_size}
               onChange={this.handleChange}
+              // onChange={this.handleChange}
               name="batch_size"
               className="Setting_input"
             />
@@ -117,6 +118,7 @@ class ParameterForm extends Component {
             <input
               value={this.state.iteration}
               onChange={this.handleChange}
+              // onChange={this.handleChange}
               name="iteration"
               className="Setting_input"
             />
@@ -138,7 +140,7 @@ class ParameterForm extends Component {
             </div>
           </div>
           <button onClick={this.handleSubmit} className="labeling_save_btn">
-            Save
+            Run
           </button>
         </form>
       </div>

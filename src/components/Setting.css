@@ -12,7 +12,7 @@
 }
 
 .WTD_Kor {
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 700;
   color: white;
 }
@@ -48,9 +48,9 @@
 }
 .Setting_item {
   width: 220px;
-  font-size: 30px;
+  font-size: 25px;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .Setting_inputs {

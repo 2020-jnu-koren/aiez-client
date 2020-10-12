@@ -16,13 +16,12 @@ class Setting extends React.Component {
         <header className="header">
           <div className="header__center">
             <div className="header__title">
-              Home Project New project Setting
+              Home / Project / New project / Setting
             </div>
           </div>
         </header>
         <main className="Setting_main">
           <div className="WhatToDo">
-            <div className="WTD_Eng">Set training tool and parameters.</div>
             <div className="WTD_Kor">
               원하는 트레이닝 툴과 변수 값을 설정해주세요.
             </div>

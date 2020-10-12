@@ -1,8 +1,9 @@
 import React from "react";
 import classNames from "classnames";
 import Dropzone from "react-dropzone";
-import ReactCrop from "react-image-crop";
 import "./Upload_data.css";
+import InteractiveList from "./Uploaded_data_list.js";
+import Popup_Upload from "./Popup_Upload.js";
 
 const imageMaxSize = 10000000; //bytes
 const acceptedFileTypes =
@@ -16,6 +17,7 @@ class Upload_data extends React.Component {
     super(props);
     this.state = {
       imgSrc: null,
+      showPopup: false,
     };
   }
   verifyFile = (files) => {
@@ -62,6 +64,11 @@ class Upload_data extends React.Component {
       }
     }
   };
+  togglePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup,
+    });
+  }
 
   render() {
     const { imgSrc } = this.state;
@@ -71,44 +78,90 @@ class Upload_data extends React.Component {
           <header className="header">
             <div className="header__center">
               <div className="header__title">
-                Home Project New project Upload Data
+                Home / Project / New project/ Upload / Data
               </div>
             </div>
           </header>
-          <main>
+          <main className="upload_data_main">
             <div className="upload_data__title">Upload Data</div>
             <div>
               <div>
                 {imgSrc !== null ? (
                   <div>
-                    <img src={imgSrc} art="hihi" />
+                    <div>
+                      <Dropzone
+                        onDrop={this.handleOnDrop}
+                        accept={acceptedFileTypes}
+                        className="drop_zone"
+                      >
+                        {({ getRootProps, getInputProps, isDragActive }) => {
+                          return (
+                            <div
+                              {...getRootProps()}
+                              className={classNames("dropzone", {
+                                "dropzone--isActive": isDragActive,
+                              })}
+                            >
+                              <input {...getInputProps()} />
+                              {isDragActive ? (
+                                <p>Drop files here...</p>
+                              ) : (
+                                <p>
+                                  파일을 드래그 하거나, 클릭하여 파일을
+                                  선택하세요.
+                                </p>
+                              )}
+                            </div>
+                          );
+                        }}
+                      </Dropzone>
+                    </div>
+                    <div className="uploaded_date_list">
+                      <InteractiveList />
+                      <div className="upload_save">
+                        <button
+                          id="upload_save__btn"
+                          onClick={this.togglePopup.bind(this)}
+                        >
+                          Save
+                        </button>
+                        {this.state.showPopup ? (
+                          <Popup_Upload
+                            closePopup={this.togglePopup.bind(this)}
+                          />
+                        ) : null}
+                      </div>
+                    </div>
                   </div>
                 ) : (
-                  <Dropzone
-                    onDrop={this.handleOnDrop}
-                    accept={acceptedFileTypes}
-                  >
-                    {({ getRootProps, getInputProps, isDragActive }) => {
-                      return (
-                        <div
-                          {...getRootProps()}
-                          className={classNames("dropzone", {
-                            "dropzone--isActive": isDragActive,
-                          })}
-                        >
-                          <input {...getInputProps()} />
-                          {isDragActive ? (
-                            <p>Drop files here...</p>
-                          ) : (
-                            <p>
-                              Try dropping some files here, or click to select
-                              files to upload.
-                            </p>
-                          )}
-                        </div>
-                      );
-                    }}
-                  </Dropzone>
+                  <div>
+                    <Dropzone
+                      onDrop={this.handleOnDrop}
+                      accept={acceptedFileTypes}
+                      className="drop_zone"
+                    >
+                      {({ getRootProps, getInputProps, isDragActive }) => {
+                        return (
+                          <div
+                            {...getRootProps()}
+                            className={classNames("dropzone", {
+                              "dropzone--isActive": isDragActive,
+                            })}
+                          >
+                            <input {...getInputProps()} />
+                            {isDragActive ? (
+                              <p>Drop files here...</p>
+                            ) : (
+                              <p>
+                                파일을 드래그 하거나, 클릭하여 파일을
+                                선택하세요.
+                              </p>
+                            )}
+                          </div>
+                        );
+                      }}
+                    </Dropzone>
+                  </div>
                 )}
               </div>
             </div>

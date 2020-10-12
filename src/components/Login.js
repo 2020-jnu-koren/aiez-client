@@ -14,10 +14,7 @@ class Login extends React.Component {
         data: { users },
       },
     } = await axios.get("http://116.89.189.12/users/signin");
-    this.setState({
-      users,
-      isLoading: false,
-    });
+    this.setState({ users, isLoading: false });
   };
   async componentDidMount() {
     this.getUsers();
@@ -25,16 +22,14 @@ class Login extends React.Component {
   render() {
     const { isLoading, users } = this.state;
     return (
-      <div>
-        <body>
-          <header className="header">
-            <div className="header__center">
-              <div className="header__title"> Home Project </div>
-            </div>
-          </header>
-          <main> </main>
-        </body>
-      </div>
+      <body>
+        <header className="header">
+          <div className="header__center">
+            <div className="header__title">Home Project</div>
+          </div>
+        </header>
+        <main></main>
+      </body>
     );
   }
 }

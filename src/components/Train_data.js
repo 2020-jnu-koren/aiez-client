@@ -10,14 +10,17 @@ class Train_data extends React.Component {
           <header className="header">
             <div className="header__center">
               <div className="header__title">
-                Home Project New project Train Dataset
+                Home / Project / New project / Train Dataset
               </div>
             </div>
           </header>
           <main>
             <div className="my_label">Labeling Library</div>
             <div className="label_list">
-              <Link className="label_list_ex" to="/project/test">
+              <Link
+                className="label_list_ex"
+                to="/project/new_project/train_data/setting"
+              >
                 <div className="label_list__num">500</div>
                 <div className="label_list__title">dataset1</div>
               </Link>

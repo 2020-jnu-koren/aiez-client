@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Navigation.css";
+import logo1 from "./img/logo1.png";
 
 function Navigation() {
   return (
     <div className="nav">
       <div className="nav__center">
-        <div className="logo">This will be filled with our logo!</div>
         <Link className="nav_item" to="/">
-          Home
+          <img className="logo" src={logo1} alt="img" />
         </Link>
         <Link className="nav_item" to="/about">
           About

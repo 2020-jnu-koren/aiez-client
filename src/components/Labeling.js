@@ -7,6 +7,8 @@ import drag from "./img/drag.svg";
 import { Link } from "react-router-dom";
 import { Annotator } from "image-labeler-react";
 import Popup_Class from "./Popup_Class.js";
+import InteractiveList from "./Dataset_list.js";
+import banana1 from "./img/labeling_img/banana1.jpg";
 
 class Labeling extends React.Component {
   constructor(props) {
@@ -52,7 +54,7 @@ class Labeling extends React.Component {
                     src={downArrow}
                     alt="img"
                   />
-                  <div className="labeling_img__name">Image Name</div>
+                  <div className="labeling_img__name">banana1.jpg</div>
                   <img
                     className="labeling_img__next"
                     src={downArrow}
@@ -63,9 +65,7 @@ class Labeling extends React.Component {
                   <Annotator
                     height={600}
                     width={600}
-                    imageUrl={
-                      "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTgolBdeaXdt7hZ4G28YiA8shOCg4jkBg08uA&usqp=CAU"
-                    }
+                    imageUrl={banana1}
                     asyncUpload={async (labeledData) => {
                       // upload labeled data
                     }}
@@ -77,15 +77,7 @@ class Labeling extends React.Component {
               <div className="labeling_data__summary">
                 <div className="labeling_dataset__title">Dataset Name</div>
                 <div className="labeling_dataset__main">
-                  <div className="labeling_dataset__ex">
-                    <div className="labeling_dataset__img"></div>
-                    <div className="labeling_dataset__writing">
-                      <div className="labeling_dataset__name">image name</div>
-                      <div className="labeling_dataset__description">
-                        Description
-                      </div>
-                    </div>
-                  </div>
+                  <InteractiveList />
                 </div>
                 <div className="labeling_class__bar">
                   <div className="class_bar__color">Color</div>
