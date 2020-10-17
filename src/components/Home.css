@@ -39,7 +39,8 @@
   font-size: 30px;
 }
 
-.goToProject {
+.goToProject,
+.login_btn {
   font-size: 30px;
   font-weight: 600;
   background-color: #b2bfff;

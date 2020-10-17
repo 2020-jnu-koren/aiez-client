@@ -17,6 +17,9 @@ class Home extends React.Component {
         <Link className="goToProject" to="/project/new_project">
           NOW GET STARTED!
         </Link>
+        <Link className="login_btn" to="/login">
+          LogIn
+        </Link>
       </main>
     );
   }

@@ -1,0 +1,24 @@
+.login_main {
+  display: flex;
+  padding: 50px;
+}
+.login_que {
+  font-size: 30px;
+  padding-right: 50px;
+}
+.login_input {
+  display: flex;
+  flex-direction: column;
+  font-size: 30px;
+}
+
+.login_confirm__btn {
+  font-size: 30px;
+  font-weight: 600;
+  background-color: #b2bfff;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-left: 400px;
+}

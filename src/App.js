@@ -14,6 +14,7 @@ import Setting from "./components/Setting";
 import Navigation from "./components/Navigation";
 import Train from "./components/Train";
 import Test from "./components/Test";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
       />
       <Route path="/project/new_project/train" component={Train} />
       <Route path="/project/test" component={Test} />
+      <Route path="/login" component={Login} />
     </HashRouter>
   );
 }
