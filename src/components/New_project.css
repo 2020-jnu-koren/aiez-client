@@ -1,11 +1,10 @@
 @import "reset.css";
 
 .Btn_number {
-  margin-left: 30px;
-  margin-bottom: 10px;
   font-size: 50px;
   font-weight: bold;
   color: white;
+  text-shadow: 2px 2px 2px gray;
 }
 
 .Btns {
@@ -15,39 +14,46 @@
   padding-top: 30px;
 }
 
-.Btn {
+/* .Btn {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 330px;
-  width: 380px;
+
   background-color: white;
   margin: 0 30px;
   color: inherit;
   text-decoration: none;
-  box-shadow: 0 13px 27px -5px rgba(50, 50, 93, 0.25),
-    0 8px 16px -8px rgba(0, 0, 0, 0.3), 0 -6px 16px -6px rgba(0, 0, 0, 0.025);
+
+} */
+.Btn_img {
+  height: 280px;
+  width: 380px;
 }
 
-.Btn_item {
-  padding: 10px 0px;
+.BtnNNumber {
+  padding: 0px 30px;
 }
-
-.Btn_eng {
-  font-weight: 600;
-  font-size: 40px;
-  text-align: center;
-}
-
-.Btn_kor {
+.Btn_info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  background-color: white;
   font-size: 20px;
-  text-align: center;
+  color: black;
+  font-weight: 600;
 }
-
-.Btn_icon {
-  width: 200px;
-  height: 200px;
-  margin-bottom: -50px;
-  margin-top: -70px;
+.Btn {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), 0 2px 2px rgba(0, 0, 0, 0.15),
+    0 4px 4px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s;
+}
+.Btn:hover {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.11), 0 2px 2px rgba(0, 0, 0, 0.11),
+    0 4px 4px rgba(0, 0, 0, 0.11), 0 8px 8px rgba(0, 0, 0, 0.11),
+    0 16px 16px rgba(0, 0, 0, 0.11);
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.025);
 }

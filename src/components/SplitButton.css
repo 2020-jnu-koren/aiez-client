@@ -1,0 +1,19 @@
+/* .ButtonGroup {
+  width: 400px;
+} */
+
+.ButtonGroup {
+  width: 320px;
+}
+.ButtonGroup1 {
+  width: 270px;
+  background-color: white !important;
+}
+.ButtonGroup2 {
+  background-color: #b2bfff !important;
+  width: 50px;
+}
+
+.Popper {
+  width: 320px;
+}

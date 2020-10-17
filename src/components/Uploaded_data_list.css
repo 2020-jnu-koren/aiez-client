@@ -1,0 +1,21 @@
+@import "reset.css";
+
+.banana_list {
+  font-size: 20px;
+}
+.bananas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3px 5px;
+  padding-right: 30px;
+  border-bottom: 1px solid #bebebe;
+}
+.banana_set {
+  display: flex;
+}
+#banana_img {
+  height: 70px;
+  width: 100px;
+  margin-right: 20px;
+}

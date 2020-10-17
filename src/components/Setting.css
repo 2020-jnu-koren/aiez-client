@@ -1,6 +1,7 @@
 .WhatToDo {
   width: 1300px;
-  margin: 40px auto;
+  margin: 0px auto;
+  padding: 40px 0px;
 }
 
 .WTD_Eng {
@@ -11,7 +12,7 @@
 }
 
 .WTD_Kor {
-  font-size: 25px;
+  font-size: 28px;
   font-weight: 700;
   color: white;
 }
@@ -38,19 +39,28 @@
 }
 
 .Training_Tool {
-  font-size: 30px;
+  padding-left: 220px;
   margin-bottom: 30px;
 }
 
+.Parameter_Setting {
+  display: flex;
+}
 .Setting_item {
   width: 220px;
-  font-size: 30px;
+  font-size: 25px;
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+}
+
+.Setting_inputs {
+  display: flex;
+  flex-direction: column;
 }
 
 .Setting_input {
   width: 200px;
   height: 30px;
   background-color: white;
+  margin-bottom: 20px;
 }

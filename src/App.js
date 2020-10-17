@@ -12,7 +12,9 @@ import Train_data from "./components/Train_data";
 import Labeling from "./components/Labeling";
 import Setting from "./components/Setting";
 import Navigation from "./components/Navigation";
-import Train_result from "./components/Train_result";
+import Train from "./components/Train";
+import Test from "./components/Test";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -42,10 +44,9 @@ function App() {
         path="/project/new_project/train_data/setting"
         component={Setting}
       />
-      <Route
-        path="/project/new_project/train_result"
-        component={Train_result}
-      />
+      <Route path="/project/new_project/train" component={Train} />
+      <Route path="/project/test" component={Test} />
+      <Route path="/login" component={Login} />
     </HashRouter>
   );
 }

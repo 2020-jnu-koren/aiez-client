@@ -1,78 +1,32 @@
 import React from "react";
 import "./Labeling.css";
-import "./Popup_class.css";
 import downArrow from "./img/downArrow.svg";
 import area_selection from "./img/area_selection.svg";
 import cursor from "./img/cursor.svg";
 import drag from "./img/drag.svg";
 import { Link } from "react-router-dom";
-
-class Popup_Class extends React.Component {
-  render() {
-    return (
-      <div className="popup">
-        <div className="popup_inner">
-          <div className="popup_inner__center">
-            <div className="popup_class__title">Create Class</div>
-            <div className="popup_class__main">
-              <div className="popup_class__name">
-                <div className="popup_class__name_que">Class Name :</div>
-                <div className="popup_class__name_ex">title1</div>
-              </div>
-              <div className="popup_class__description">
-                <div className="popup_class__description_que">
-                  Description :
-                </div>
-                <div className="popup_class__description_ex"></div>
-              </div>
-              <div className="popup_class__key">
-                <div className="popup_class__key_que">Hot Key :</div>
-                <div className="popup_class__key_ex">a</div>
-              </div>
-              <div className="popup_class__color">
-                <div className="popup_class__color_que">Color :</div>
-                <div className="popup_class__color_ex">
-                  <div className="popup_class__color_cir"></div>
-                  <div className="popup_class__color_txt">FF0000</div>
-                </div>
-              </div>
-              <div className="popup_class_description"></div>
-            </div>
-            <div className="class_create__close">
-              <button
-                id="class_create__close_btn"
-                onClick={this.props.closePopup}
-              >
-                Close
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    );
-  }
-}
+import { Annotator } from "image-labeler-react";
+import Popup_Class from "./Popup_Class.js";
+import InteractiveList from "./Dataset_list.js";
+import banana1 from "./img/labeling_img/banana1.jpg";
 
 class Labeling extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      showPopup: false,
-    };
+  constructor(props) {
+    super(props);
+    this.state = { showPopup: false };
   }
   togglePopup() {
     this.setState({
       showPopup: !this.state.showPopup,
     });
   }
+
   render() {
     return (
       <body>
         <header className="header">
           <div className="header__center">
-            <div className="header__title">
-              Home > Project > New project > Prepare Dataset
-            </div>
+            <div className="header__title">Labeling</div>
           </div>
         </header>
         <main>
@@ -93,7 +47,6 @@ class Labeling extends React.Component {
                   />
                 </div>
               </div>
-
               <div className="labeling_frame__main">
                 <div className="labeling_img__title">
                   <img
@@ -101,27 +54,30 @@ class Labeling extends React.Component {
                     src={downArrow}
                     alt="img"
                   />
-                  <div className="labeling_img__name">Image Name</div>
+                  <div className="labeling_img__name">banana1.jpg</div>
                   <img
                     className="labeling_img__next"
                     src={downArrow}
                     alt="img"
                   />
                 </div>
-                <div className="labeling_img__main"></div>
+                <div className="labeling_img__main">
+                  <Annotator
+                    height={600}
+                    width={600}
+                    imageUrl={banana1}
+                    asyncUpload={async (labeledData) => {
+                      // upload labeled data
+                    }}
+                    types={["A", "B", "C"]}
+                    defaultType={"A"}
+                  />
+                </div>
               </div>
               <div className="labeling_data__summary">
                 <div className="labeling_dataset__title">Dataset Name</div>
                 <div className="labeling_dataset__main">
-                  <div className="labeling_dataset__ex">
-                    <div className="labeling_dataset__img"></div>
-                    <div className="labeling_dataset__writing">
-                      <div className="labeling_dataset__name">image name</div>
-                      <div className="labeling_dataset__description">
-                        Description
-                      </div>
-                    </div>
-                  </div>
+                  <InteractiveList />
                 </div>
                 <div className="labeling_class__bar">
                   <div className="class_bar__color">Color</div>
@@ -148,14 +104,16 @@ class Labeling extends React.Component {
                 </div>
               </div>
             </div>
-            <Link
-              className="labeling_save"
-              to="/project/new_project/train_data/setting"
-            >
+            <div className="labeling_save">
               <div className="labeling_save_center">
-                <div className="labeling_save__btn">Save</div>
+                <Link
+                  className="labeling_save__btn"
+                  to="/project/new_project/train_data/setting"
+                >
+                  Save
+                </Link>
               </div>
-            </Link>
+            </div>
           </div>
         </main>
       </body>

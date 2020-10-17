@@ -8,7 +8,7 @@ class Project extends React.Component {
       <body>
         <header className="header">
           <div className="header__center">
-            <div className="header__title">Home > Project</div>
+            <div className="header__title">Home / Project</div>
           </div>
         </header>
         <main>
@@ -16,8 +16,6 @@ class Project extends React.Component {
             <div className="project-bar__column">
               <div className="project-bar__title">Date</div>
               <div className="project-bar__title">Name</div>
-              <div className="project-bar__title">Architecture</div>
-              <div className="project-bar__title">Storage</div>
             </div>
             <div className="project-bar__column new-project-btn__column">
               <Link className="new-project-btn" to="/project/new_project">
@@ -25,20 +23,21 @@ class Project extends React.Component {
               </Link>
             </div>
           </div>
-          <div className="project-list">
-            <div className="project-list__column">
-              <div className="project-list__data">data 받아오면 진행</div>
-              <div className="project-list__data"></div>
-              <div className="project-list__data"></div>
-              <div className="project-list__data"></div>
-            </div>
-            <div className="project-list__column">
-              <div className="project-list__btns">
-                <div className="project-train-btn">Train</div>
-                <div className="project-test-btn">Test</div>
+          <div className="project-lists">
+            <div className="project-list">
+              <div className="project-list_info">
+                <div className="project_date">2020-09-31</div>
+                <div className="project_name">banana_project1</div>
+              </div>
+              <div className="project-btns">
+                <div className="project-train-btn project-btn">Train</div>
+                <div className="project-test-btn project-btn">Test</div>
               </div>
             </div>
           </div>
+          {/* <div className="project-lists2">
+            <div className="no_project">프로젝트가 존재하지 않습니다.</div>
+          </div> */}
         </main>
       </body>
     );
