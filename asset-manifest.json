@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/aiez-client/static/css/main.92fb8056.chunk.css",
-    "main.js": "/aiez-client/static/js/main.c7c590c0.chunk.js",
-    "main.js.map": "/aiez-client/static/js/main.c7c590c0.chunk.js.map",
+    "main.css": "/aiez-client/static/css/main.eeecb3f1.chunk.css",
+    "main.js": "/aiez-client/static/js/main.9d7b85ba.chunk.js",
+    "main.js.map": "/aiez-client/static/js/main.9d7b85ba.chunk.js.map",
     "runtime-main.js": "/aiez-client/static/js/runtime-main.5fa4fdcd.js",
     "runtime-main.js.map": "/aiez-client/static/js/runtime-main.5fa4fdcd.js.map",
     "static/css/2.8718dd3e.chunk.css": "/aiez-client/static/css/2.8718dd3e.chunk.css",
-    "static/js/2.75305c87.chunk.js": "/aiez-client/static/js/2.75305c87.chunk.js",
-    "static/js/2.75305c87.chunk.js.map": "/aiez-client/static/js/2.75305c87.chunk.js.map",
+    "static/js/2.5d3a5c7b.chunk.js": "/aiez-client/static/js/2.5d3a5c7b.chunk.js",
+    "static/js/2.5d3a5c7b.chunk.js.map": "/aiez-client/static/js/2.5d3a5c7b.chunk.js.map",
     "index.html": "/aiez-client/index.html",
-    "precache-manifest.34b799a7a52cf3c9df0960336cb5dd46.js": "/aiez-client/precache-manifest.34b799a7a52cf3c9df0960336cb5dd46.js",
+    "precache-manifest.54d2eaa26464796cbb977bc37f82332a.js": "/aiez-client/precache-manifest.54d2eaa26464796cbb977bc37f82332a.js",
     "service-worker.js": "/aiez-client/service-worker.js",
     "static/css/2.8718dd3e.chunk.css.map": "/aiez-client/static/css/2.8718dd3e.chunk.css.map",
-    "static/css/main.92fb8056.chunk.css.map": "/aiez-client/static/css/main.92fb8056.chunk.css.map",
-    "static/js/2.75305c87.chunk.js.LICENSE.txt": "/aiez-client/static/js/2.75305c87.chunk.js.LICENSE.txt",
+    "static/css/main.eeecb3f1.chunk.css.map": "/aiez-client/static/css/main.eeecb3f1.chunk.css.map",
+    "static/js/2.5d3a5c7b.chunk.js.LICENSE.txt": "/aiez-client/static/js/2.5d3a5c7b.chunk.js.LICENSE.txt",
     "static/media/area_selection.svg": "/aiez-client/static/media/area_selection.b9284b16.svg",
     "static/media/background.jpg": "/aiez-client/static/media/background.68a7d581.jpg",
     "static/media/bg.png": "/aiez-client/static/media/bg.c7b1c1c2.png",
@@ -27,8 +27,8 @@
   "entrypoints": [
     "static/js/runtime-main.5fa4fdcd.js",
     "static/css/2.8718dd3e.chunk.css",
-    "static/js/2.75305c87.chunk.js",
-    "static/css/main.92fb8056.chunk.css",
-    "static/js/main.c7c590c0.chunk.js"
+    "static/js/2.5d3a5c7b.chunk.js",
+    "static/css/main.eeecb3f1.chunk.css",
+    "static/js/main.9d7b85ba.chunk.js"
   ]
 }
