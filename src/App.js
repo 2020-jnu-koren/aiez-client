@@ -13,6 +13,7 @@ import Labeling from "./components/Labeling";
 import Setting from "./components/Setting";
 import Navigation from "./components/Navigation";
 import Train_result from "./components/Train_result";
+import Login from "./components/Login";
 
 function App() {
   return (
@@ -45,6 +46,10 @@ function App() {
       <Route
         path="/project/new_project/train_result"
         component={Train_result}
+      />
+      <Route 
+        path="/login"
+        component={Login}
       />
     </HashRouter>
   );

@@ -19,6 +19,9 @@ function Navigation() {
         <Link className="nav_item" to="/more_models">
           More Models
         </Link>
+        <Link className="nav_item" to="/login">
+          Login
+        </Link>
       </div>
     </div>
   );
