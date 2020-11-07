@@ -1,0 +1,19 @@
+.hover {
+    background-color: papayawhip;   
+    width: 300px;
+    height: 150px; 
+    border-style: dashed;
+    border-color: chocolate;
+}
+
+.trigger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    background-color: #fff564;
+    color: black;
+}

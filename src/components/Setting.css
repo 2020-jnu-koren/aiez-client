@@ -14,7 +14,7 @@
 .WTD_Kor {
   font-size: 28px;
   font-weight: 700;
-  color: white;
+  color: black;
 }
 
 .Setting_select {
@@ -30,13 +30,19 @@
 .Setting_big_item {
   font-size: 30px;
   font-weight: 600;
-  color: white;
+  color: black;
   margin-bottom: 30px;
 }
 
 .Setting_list {
   display: flex;
 }
+.Setting_item__help {
+  width: 40px;
+  padding-top: 5px;
+  margin-right: 50px;
+}
+
 
 .Training_Tool {
   padding-left: 220px;
@@ -47,9 +53,9 @@
   display: flex;
 }
 .Setting_item {
-  width: 220px;
+  width: 150px;
   font-size: 25px;
-  color: white;
+  color: black;
   margin-bottom: 16px;
 }
 
@@ -64,3 +70,4 @@
   background-color: white;
   margin-bottom: 20px;
 }
+
