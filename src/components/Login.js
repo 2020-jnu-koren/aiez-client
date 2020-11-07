@@ -4,27 +4,42 @@ import "./Login.css";
 import { Link } from "react-router-dom";
 
 class Login extends React.Component {
-  state = {
-    isLoading: true,
-    user: [],
-    id:"",
-    password:"",
-  };
-  getUsers = async () => {
-    const {
-      data: {
-        users
+  constructor(props){
+    super(props);
+    this.state={
+      id:"",
+      password:""
+    };
+  }
+  handleIdChange = (e) =>{
+    this.setState({id: e.target.value});
+    // this.state.id=e.target.value;
+  }
+  handlePwChamge = (e) =>{
+    this.setState({password: e.target.value});
+    // this.state.password=e.target.value;
+  }
+  signin = (e) =>{
+    console.log(this.state);
+    axios({
+      method: "post",
+      url: "http://116.89.189.12/users/login",
+      headers:{
+        "Accept": "application/json",
+        "Authorization": "Token 13bc8256196bcf1d297e80b136855ba7d0ec46a6",
+        "Content-Type": "application/json",
+        "credentials":"include"
       },
-    } = await axios.get("http://116.89.189.12/users/signin");
-    this.setState({ users, isLoading: false });
-  };
-  async componentDidMount() {
-    this.getUsers();
+      data: {
+        "email" : this.state.id,
+        "password" : this.state.password
+      }
+    }).then(res => console.log(res.data)); 
   }
   render() {
     const { isLoading, users } = this.state;
     return (
-      <body>
+      <div>
         <header className="header">
           <div className="header__center">
             <div className="header__title">LogIn</div>
@@ -37,17 +52,18 @@ class Login extends React.Component {
               <div className="login_que__pass">Password</div>
             </div>
             <div className="login_input">
-              <input className="login_input__id" value={this.state.id} name="id"></input>
-              <input className="login_input__pass" value={this.state.password} name="password"></input>
+              <input className="login_input__id" onChange={this.handleIdChange} name="id" type="email"></input>
+              <input className="login_input__pass" onChange={this.handlePwChamge} name="password" type="password"></input>
             </div>
           </div>
-          <Link className="login_confirm__btn" to="/">
+          <button className="login_confirm__btn" onClick={this.signin} type="button">
             Confirm
-          </Link>
+          </button>
         </main>
-      </body>
+      </div>
     );
   }
 }
+
 
 export default Login;
