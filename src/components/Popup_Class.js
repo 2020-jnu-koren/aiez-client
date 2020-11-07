@@ -1,5 +1,5 @@
 import React from "react";
-import "./Popup_class.css";
+import "./Popup_Class.css";
 import InputColor from "react-input-color";
 
 function Color_Setting(color_state) {
