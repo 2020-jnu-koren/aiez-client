@@ -68,7 +68,7 @@ class Login extends React.Component {
             </div>
           </div>
           <button className="login_confirm__btn" onClick={this.signin} type="button">
-            Confirm
+            Login
           </button>
         </main>
       </div>

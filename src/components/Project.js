@@ -5,33 +5,36 @@ import Projectls from "./Projectls";
 import axios from "axios";
 
 class Project extends React.Component {
-  state = {
-    projects: ""
+  constructor(props){
+    super(props);
+    this.state = {
+      projects: null
+    };
   }
+  
   componentDidMount(){
     this.callApi()
     
   }
-
   callApi = async () =>{
+    console.log(this.state);
     axios({
       method: "get",
-      url: "http://116.89.189.12/projects",
+      url: "http://116.89.189.12/users",
       headers:{
         "Accept": "application/json",
         "Authorization": "Token 13bc8256196bcf1d297e80b136855ba7d0ec46a6",
         "Content-Type": "application/json",
         "credentials":"include"
-      },
-      data: {
-        "id" : "5f3d0cf77ff28a003e81f43f"
       }
-    }).then(res => console.log(res.data)); 
+    }).then(res => console.log(res.data))
+    .then(response => response.json())
+    .then(projects => this.setState({ projects }));
 
   }
   render() {
     return (
-      <body>
+      <div>
         <header className="header">
           <div className="header__center">
             <div className="header__title">Home / Project</div>
@@ -65,10 +68,10 @@ class Project extends React.Component {
             <div className="no_project">프로젝트가 존재하지 않습니다.</div>
           </div> */}
           {this.state.projects ? this.state.projects.map(p=>{
-            return <Projectls key={p.id} Date={p.Date} Name={p.Name} />
+            return <Projectls key={p._id} Date={p.createdAt} Name={p.title} />
           }):""}
         </main>
-      </body>
+      </div>
     );
   }
 }
