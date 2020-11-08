@@ -6,6 +6,7 @@ import SplitButton from "./SplitButton.js";
 import HoverComponent from './HoverComponent.js'
 import TriggerComponent from './TriggerComponent.js'
 import { Link } from "react-router-dom";
+import './component.css'
 
 
 const optionsCursorTrueWithMargin = {
@@ -52,21 +53,53 @@ class Setting extends React.Component {
                     <div className="Setting_item__help">
                       <ReactHover options={optionsCursorTrueWithMargin}>
                         <Trigger type="trigger">
-                          <TriggerComponent />
+                          <div className="trigger">
+                            <div>?</div>
+                          </div>
                         </Trigger>
                         <Hover type="hover">
-                          <HoverComponent />
+                          <div className={'hover'}>
+                            <blockquote className={'quote'}>
+                              도움말1
+                            </blockquote>
+                          </div>
                         </Hover>
                       </ReactHover>
                     </div>
                   </li>
                   <li className="Setting_list">
                     <div className="Setting_item">Batch Size</div>
-
+                    <ReactHover options={optionsCursorTrueWithMargin}>
+                      <Trigger type="trigger">
+                        <div className="trigger">
+                          <div>?</div>
+                        </div>
+                      </Trigger>
+                      <Hover type="hover">
+                        <div className={'hover'}>
+                          <blockquote className={'quote'}>
+                            도움말2
+                          </blockquote>
+                        </div>
+                      </Hover>
+                    </ReactHover>
                   </li>
                   <li className="Setting_list">
                     <div className="Setting_item">Iteration</div>
-
+                    <ReactHover options={optionsCursorTrueWithMargin}>
+                      <Trigger type="trigger">
+                        <div className="trigger">
+                          <div>?</div>
+                        </div>
+                      </Trigger>
+                      <Hover type="hover">
+                        <div className={'hover'}>
+                          <blockquote className={'quote'}>
+                            도움말3
+                          </blockquote>
+                        </div>
+                      </Hover>
+                    </ReactHover>
                   </li>
                 </ul>
                 <div>
