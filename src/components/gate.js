@@ -19,7 +19,7 @@ class gate extends React.Component {
     return (
       <div className="upload_save">
         <button id="ending_btn" onClick={this.togglePopup.bind(this)}>
-          Save
+          저장하기
         </button>
         {this.state.showPopup ? (
           <Popup_2 closePopup={this.togglePopup.bind(this)} />

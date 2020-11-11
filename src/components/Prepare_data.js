@@ -11,12 +11,12 @@ class Prepare_data extends React.Component {
           <header className="header">
             <div className="header__center">
               <div className="header__title">
-                Home / Project / New project / Prepare / Dataset
+                홈 화면 / 프로젝트 / 새 프로젝트 / 데이터셋
               </div>
             </div>
           </header>
           <main>
-            <div className="my_library">My Library</div>
+            <div className="my_library">데이터셋</div>
             <div className="library_list">
               <div className="library_list_box">
                 <Link

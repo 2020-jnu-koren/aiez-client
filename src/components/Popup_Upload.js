@@ -8,10 +8,10 @@ class Popup_Upload extends React.Component {
       <div className="popup">
         <div className="popup_inner">
           <div className="popup_upload_center">
-            <div className="popup_upload__title">Create Dataset</div>
+            <div className="popup_upload__title">데이터셋 생성하기</div>
             <div className="popup_upload__main">
               <div className="popup_upload__name">
-                <div className="popup_upload__name_que">Dataset Title :</div>
+                <div className="popup_upload__name_que">데이터셋 제목 :</div>
                 <input className="popup_upload__name_ex" />
               </div>
             </div>
@@ -21,7 +21,7 @@ class Popup_Upload extends React.Component {
                   className="dataset_create__ok_btn"
                   to="/project/new_project/prepare_data"
                 >
-                  OK
+                  확인
                 </Link>
               </div>
               <div className="dataset_create__cancel">
@@ -29,7 +29,7 @@ class Popup_Upload extends React.Component {
                   id="dataset_create__cancel_btn"
                   onClick={this.props.closePopup}
                 >
-                  Cancel
+                  취소
                 </button>
               </div>
             </div>

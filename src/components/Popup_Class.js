@@ -30,24 +30,24 @@ class Popup_Class extends React.Component {
       <div className="popup">
         <div className="popup_inner">
           <div className="popup_inner__center">
-            <div className="popup_class__title">Create Class</div>
+            <div className="popup_class__title">클래스 생성하기</div>
             <div className="popup_class__main">
               <div className="popup_class__name">
-                <div className="popup_class__name_que">Class Name :</div>
+                <div className="popup_class__name_que">클래스 이름 :</div>
                 <div className="popup_class__name_ex">title1</div>
               </div>
               <div className="popup_class__description">
                 <div className="popup_class__description_que">
-                  Description :
+                  설명 :
                 </div>
                 <input className="popup_class__description_ex" />
               </div>
               <div className="popup_class__key">
-                <div className="popup_class__key_que">Hot Key :</div>
+                <div className="popup_class__key_que">단축키 :</div>
                 <input value="a" className="popup_class__key_ex" />
               </div>
               <div className="popup_class__color">
-                <div className="popup_class__color_que">Color :</div>
+                <div className="popup_class__color_que">색 :</div>
                 <div className="popup_class__color_ex">
                   <div className="popup_class__color_cir">
                     <Color_Setting />
@@ -66,7 +66,7 @@ class Popup_Class extends React.Component {
                 id="class_create__close_btn"
                 onClick={this.props.closePopup}
               >
-                Close
+                저장
               </button>
             </div>
           </div>

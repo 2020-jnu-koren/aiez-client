@@ -140,7 +140,7 @@ class ParameterForm extends Component {
             </div>
           </div>
           <button onClick={this.handleSubmit} className="labeling_save_btn">
-            Run
+            학습
           </button>
         </form>
       </div>

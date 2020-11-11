@@ -1,0 +1,24 @@
+.about_main {
+    background-color: #e6eafc;
+  height: 4500px;
+}
+
+.about_1,
+.about_2,
+.about_3,
+.about_4,
+.about_5,
+.about_6,
+.about_7 {
+    display:flex;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+#guide_img {
+    padding: 0 50px;
+}
+.guide_txt {
+    font-size: 40px;
+    font-weight: 600;
+}

@@ -17,7 +17,7 @@ class Train extends React.Component {
         <header className="header">
           <div className="header__center">
             <div className="header__title">
-              Home / Project / New project / Setting / Train
+              홈 화면 / 프로젝트 / 새 프로젝트 / 설정 / 학습
             </div>
           </div>
         </header>

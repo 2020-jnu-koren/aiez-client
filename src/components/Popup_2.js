@@ -8,17 +8,17 @@ class Popup_2 extends React.Component {
       <div className="popup">
         <div className="popup_inner">
           <div className="popup_upload_center">
-            <div className="popup_upload__title">Create Project</div>
+            <div className="popup_upload__title">프로젝트 생성</div>
             <div className="popup_upload__main">
               <div className="popup_upload__name">
-                <div className="popup_upload__name_que">Project Title :</div>
+                <div className="popup_upload__name_que">프로젝트 제목 :</div>
                 <input className="popup_upload__name_ex" />
               </div>
             </div>
             <div className="dataset_create__btns">
               <div className="dataset_create__ok">
                 <Link className="dataset_create__ok_btn" to="/project">
-                  OK
+                  확인
                 </Link>
               </div>
               <div className="dataset_create__cancel">
@@ -26,7 +26,7 @@ class Popup_2 extends React.Component {
                   id="dataset_create__cancel_btn"
                   onClick={this.props.closePopup}
                 >
-                  Cancel
+                  취소
                 </button>
               </div>
             </div>

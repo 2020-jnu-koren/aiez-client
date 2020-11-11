@@ -11,13 +11,13 @@ function Navigation() {
           <img className="logo" src={logo1} alt="img" />
         </Link>
         <Link className="nav_item" to="/about">
-          About
+          사용법
         </Link>
         <Link className="nav_item" to="/project">
-          Project
+          프로젝트
         </Link>
         <Link className="nav_item" to="/more_models">
-          More Models
+          더 많은 모델들
         </Link>
       </div>
     </div>

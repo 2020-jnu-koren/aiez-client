@@ -10,12 +10,12 @@ class Train_data extends React.Component {
           <header className="header">
             <div className="header__center">
               <div className="header__title">
-                Home / Project / New project / Train Dataset
+                홈 화면 / 프로젝트 / 새 프로젝트 / 데이터셋 학습
               </div>
             </div>
           </header>
           <main>
-            <div className="my_label">Labeling Library</div>
+            <div className="my_label">라벨링된 자료</div>
             <div className="label_list">
               <Link
                 className="label_list_ex"

@@ -26,7 +26,7 @@ class Labeling extends React.Component {
       <body>
         <header className="header">
           <div className="header__center">
-            <div className="header__title">Labeling</div>
+            <div className="header__title">라벨링</div>
           </div>
         </header>
         <main>
@@ -75,14 +75,14 @@ class Labeling extends React.Component {
                 </div>
               </div>
               <div className="labeling_data__summary">
-                <div className="labeling_dataset__title">Dataset Name</div>
+                <div className="labeling_dataset__title">데이터셋 이름</div>
                 <div className="labeling_dataset__main">
                   <InteractiveList />
                 </div>
                 <div className="labeling_class__bar">
-                  <div className="class_bar__color">Color</div>
-                  <div className="class_bar__name">Class Name</div>
-                  <div className="class_bar__key">Hot Key</div>
+                  <div className="class_bar__color">색</div>
+                  <div className="class_bar__name">클래스 이름</div>
+                  <div className="class_bar__key">단축키</div>
                 </div>
                 <div className="class_list">
                   <div className="class_list__ex">
@@ -96,7 +96,7 @@ class Labeling extends React.Component {
                     id="class_create__btn"
                     onClick={this.togglePopup.bind(this)}
                   >
-                    Create Class
+                    클래스 생성
                   </button>
                   {this.state.showPopup ? (
                     <Popup_Class closePopup={this.togglePopup.bind(this)} />
@@ -110,7 +110,7 @@ class Labeling extends React.Component {
                   className="labeling_save__btn"
                   to="/project/new_project/train_data/setting"
                 >
-                  Save
+                  저장하기
                 </Link>
               </div>
             </div>

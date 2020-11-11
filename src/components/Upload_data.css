@@ -5,13 +5,13 @@
 }
 
 .upload_data__title {
-  color: white;
+  color: black;
   justify-content: center;
   width: 1300px;
   margin: 0 auto;
   padding-top: 20px;
   font-size: 50px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .upload_data__description {

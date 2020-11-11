@@ -28,8 +28,8 @@ class Upload_data extends React.Component {
       if (currentFileSize > imageMaxSize) {
         alert(
           "이 파일은 허용되지 않습니다." +
-            imageMaxSize +
-            "bytes이하의 파일을 업로드해주세요."
+          imageMaxSize +
+          "bytes이하의 파일을 업로드해주세요."
         );
         return false;
       }
@@ -78,12 +78,12 @@ class Upload_data extends React.Component {
           <header className="header">
             <div className="header__center">
               <div className="header__title">
-                Home / Project / New project/ Upload / Data
+                홈 화면 / 프로젝트 / 새 프로젝트 / 데이터 업로드
               </div>
             </div>
           </header>
           <main className="upload_data_main">
-            <div className="upload_data__title">Upload Data</div>
+            <div className="upload_data__title">데이터 업로드</div>
             <div>
               <div>
                 {imgSrc !== null ? (
@@ -106,11 +106,11 @@ class Upload_data extends React.Component {
                               {isDragActive ? (
                                 <p>Drop files here...</p>
                               ) : (
-                                <p>
-                                  파일을 드래그 하거나, 클릭하여 파일을
-                                  선택하세요.
-                                </p>
-                              )}
+                                  <p>
+                                    파일을 드래그 하거나, 클릭하여 파일을
+                                    선택하세요.
+                                  </p>
+                                )}
                             </div>
                           );
                         }}
@@ -123,7 +123,7 @@ class Upload_data extends React.Component {
                           id="upload_save__btn"
                           onClick={this.togglePopup.bind(this)}
                         >
-                          Save
+                          저장하기
                         </button>
                         {this.state.showPopup ? (
                           <Popup_Upload
@@ -134,35 +134,35 @@ class Upload_data extends React.Component {
                     </div>
                   </div>
                 ) : (
-                  <div>
-                    <Dropzone
-                      onDrop={this.handleOnDrop}
-                      accept={acceptedFileTypes}
-                      className="drop_zone"
-                    >
-                      {({ getRootProps, getInputProps, isDragActive }) => {
-                        return (
-                          <div
-                            {...getRootProps()}
-                            className={classNames("dropzone", {
-                              "dropzone--isActive": isDragActive,
-                            })}
-                          >
-                            <input {...getInputProps()} />
-                            {isDragActive ? (
-                              <p>Drop files here...</p>
-                            ) : (
-                              <p>
-                                파일을 드래그 하거나, 클릭하여 파일을
-                                선택하세요.
-                              </p>
-                            )}
-                          </div>
-                        );
-                      }}
-                    </Dropzone>
-                  </div>
-                )}
+                    <div>
+                      <Dropzone
+                        onDrop={this.handleOnDrop}
+                        accept={acceptedFileTypes}
+                        className="drop_zone"
+                      >
+                        {({ getRootProps, getInputProps, isDragActive }) => {
+                          return (
+                            <div
+                              {...getRootProps()}
+                              className={classNames("dropzone", {
+                                "dropzone--isActive": isDragActive,
+                              })}
+                            >
+                              <input {...getInputProps()} />
+                              {isDragActive ? (
+                                <p>Drop files here...</p>
+                              ) : (
+                                  <p>
+                                    파일을 드래그 하거나, 클릭하여 파일을
+                                    선택하세요.
+                                  </p>
+                                )}
+                            </div>
+                          );
+                        }}
+                      </Dropzone>
+                    </div>
+                  )}
               </div>
             </div>
           </main>

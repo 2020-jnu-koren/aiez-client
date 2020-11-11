@@ -11,7 +11,7 @@ class New_project extends React.Component {
       <body>
         <header className="header">
           <div className="header__center">
-            <div className="header__title">Home / Project</div>
+            <div className="header__title">홈 화면 / 프로젝트</div>
           </div>
         </header>
         <main>

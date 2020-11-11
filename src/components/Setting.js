@@ -3,8 +3,6 @@ import ReactHover, { Trigger, Hover } from 'react-hover'
 import "./Setting.css";
 import ParameterForm from "./ParameterForm.js";
 import SplitButton from "./SplitButton.js";
-import HoverComponent from './HoverComponent.js'
-import TriggerComponent from './TriggerComponent.js'
 import { Link } from "react-router-dom";
 import './component.css'
 
@@ -27,7 +25,7 @@ class Setting extends React.Component {
         <header className="header">
           <div className="header__center">
             <div className="header__title">
-              Home / Project / New project / Setting
+              홈 화면 / 프로젝트 / 새 프로젝트 / 설정
             </div>
           </div>
         </header>
@@ -39,8 +37,8 @@ class Setting extends React.Component {
           </div>
           <section className="Setting_select">
             <div className="Setting_column">
-              <div className="Setting_big_item">Training Tool</div>
-              <div className="Setting_big_item">Parameter Setting</div>
+              <div className="Setting_big_item">학습 도구</div>
+              <div className="Setting_big_item">변수 설정</div>
             </div>
             <div className="Setting_column">
               <div className="Training_Tool">
@@ -60,7 +58,7 @@ class Setting extends React.Component {
                         <Hover type="hover">
                           <div className={'hover'}>
                             <blockquote className={'quote'}>
-                              도움말1
+                              데이터 학습 횟수로, 높을수록 데이터를 학습하는 횟수가 높아진다.
                             </blockquote>
                           </div>
                         </Hover>
