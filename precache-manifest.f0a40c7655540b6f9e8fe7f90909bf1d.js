@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8faf125122f441daf673981c67aeea52",
+    "revision": "33a5525a01ab763c7e9d845b961da9a3",
     "url": "/aiez-client/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aiez-client/static/css/2.8718dd3e.chunk.css"
   },
   {
-    "revision": "5d967dd236f93e5716b2",
+    "revision": "242dec1ec3b221ef1dbc",
     "url": "/aiez-client/static/css/main.c52a6f1c.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/aiez-client/static/js/2.b96685f8.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5d967dd236f93e5716b2",
-    "url": "/aiez-client/static/js/main.8c56ef82.chunk.js"
+    "revision": "242dec1ec3b221ef1dbc",
+    "url": "/aiez-client/static/js/main.896e47f4.chunk.js"
   },
   {
     "revision": "a89d54c0e5441ce8056d",
