@@ -79,7 +79,6 @@ main {
   height: 500px;
   margin: 0 auto;
   background-color: white;
-
   border: 1px solid #908a8a;
 }
 
@@ -124,9 +123,20 @@ main {
   background-color: #d1e5ee;
   margin-right: 20px;
 }
-
 .project-test-btn {
   background-color: #eecd59;
+  margin-right: 20px;
+}
+.project-download-btn{
+  background-color: #b2e7b5;
+  display: flex;
+  height: 40px;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  padding: 5px 25px;
+  border-radius: 10px;
+  font-weight: bold;
 }
 .project-lists2 {
   display: flex;
