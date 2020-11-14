@@ -5,33 +5,30 @@ import Projectls from "./Projectls";
 import axios from "axios";
 
 class Project extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       projects: null
     };
   }
-  
-  componentDidMount(){
-    this.callApi()
-    
+
+  componentDidMount() {
+    this.callApi();
   }
-  callApi = async () =>{
-    console.log(this.state);
+  callApi = async () => {
     axios({
       method: "get",
       url: "http://116.89.189.12/users",
-      headers:{
-        "Accept": "application/json",
-        "Authorization": "Token 13bc8256196bcf1d297e80b136855ba7d0ec46a6",
-        "Content-Type": "application/json",
-        "credentials":"include"
-      }
-    }).then(res => console.log(res.data))
-    .then(response => response.json())
-    .then(projects => this.setState({ projects }));
-
-  }
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      withCredentials: true
+    })
+      .then(res => console.log(res.data))
+      .then(response => response.json())
+      .then(projects => this.setState({ projects }));
+  };
   render() {
     return (
       <div>
@@ -67,9 +64,13 @@ class Project extends React.Component {
           {/* <div className="project-lists2">
             <div className="no_project">프로젝트가 존재하지 않습니다.</div>
           </div> */}
-          {this.state.projects ? this.state.projects.map(p=>{
-            return <Projectls key={p._id} Date={p.createdAt} Name={p.title} />
-          }):""}
+          {this.state.projects
+            ? this.state.projects.map(p => {
+                return (
+                  <Projectls key={p._id} Date={p.createdAt} Name={p.title} />
+                );
+              })
+            : ""}
         </main>
       </div>
     );
