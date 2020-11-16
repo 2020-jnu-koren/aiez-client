@@ -2,7 +2,7 @@ import UrlAssembelr from "url-assembler";
 import axios from "axios";
 
 export const RESTURL = UrlAssembelr("http://116.89.189.12");
-
+//export const RESTURL = UrlAssembelr("http://localhost:4000");
 const METHOD = {
   POST: "POST",
   GET: "GET",
@@ -19,6 +19,7 @@ function getHeaders(token) {
 }
 
 function axiosWrap(params) {
+  console.log("params : ", params);
   const headers = getHeaders(params?.token);
   return axios({
     ...headers,

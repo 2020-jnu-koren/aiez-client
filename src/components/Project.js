@@ -3,6 +3,7 @@ import "./Project.css";
 import { Link } from "react-router-dom";
 import Projectls from "./Projectls";
 import axios from "axios";
+import { getMe } from "../services/user";
 
 class Project extends React.Component {
   constructor(props) {
@@ -13,22 +14,11 @@ class Project extends React.Component {
   }
 
   componentDidMount() {
-    this.callApi();
+    this.getMe();
   }
-  callApi = async () => {
-    axios({
-      method: "get",
-      url: "http://116.89.189.12/users",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      },
-      withCredentials: true
-    })
-      .then(res => console.log(res.data))
-      .then(response => response.json())
-      .then(projects => this.setState({ projects }));
-  };
+  async getMe() {
+    const result = await getMe();
+  }
   render() {
     return (
       <div>

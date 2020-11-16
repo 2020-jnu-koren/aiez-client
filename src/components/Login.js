@@ -18,14 +18,18 @@ class Login extends React.Component {
   handlePwChamge = e => {
     this.setState({ password: e.target.value });
   };
+
   signin = async () => {
     try {
-      const result = await postLogin();
-      console.log("result.data : ", result.data);
+      const { id, password } = this.state;
+      const result = await postLogin({ email: id, password });
+      console.log("result : ", result);
+      this.props.history.push("/project");
     } catch (e) {
       console.log("e : ", e);
     }
   };
+
   render() {
     const { isLoading, users } = this.state;
     return (
