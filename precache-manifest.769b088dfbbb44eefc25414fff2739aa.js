@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "d6ea8acef4d93addb8d4d6a3cbf6fc50",
+    "revision": "db62bac6c57a3e44980daee0037d93e6",
     "url": "/aiez-client/index.html"
   },
   {
-    "revision": "18a1b67f89b9d8bf13ee",
+    "revision": "f370f92a85a57b0eeba9",
     "url": "/aiez-client/static/css/2.8718dd3e.chunk.css"
   },
   {
-    "revision": "da3a10330b9d7b39654d",
+    "revision": "57bf0d01f00247838b26",
     "url": "/aiez-client/static/css/main.78162fcd.chunk.css"
   },
   {
-    "revision": "18a1b67f89b9d8bf13ee",
-    "url": "/aiez-client/static/js/2.7f4b12a8.chunk.js"
+    "revision": "f370f92a85a57b0eeba9",
+    "url": "/aiez-client/static/js/2.818c4ecb.chunk.js"
   },
   {
-    "revision": "d50512915a9d93353b354eb67f2df637",
-    "url": "/aiez-client/static/js/2.7f4b12a8.chunk.js.LICENSE.txt"
+    "revision": "677caf9ff42ca0b8b881608c02bdc88d",
+    "url": "/aiez-client/static/js/2.818c4ecb.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "da3a10330b9d7b39654d",
-    "url": "/aiez-client/static/js/main.dd00f4d4.chunk.js"
+    "revision": "57bf0d01f00247838b26",
+    "url": "/aiez-client/static/js/main.8c3f8aa7.chunk.js"
   },
   {
     "revision": "a89d54c0e5441ce8056d",
