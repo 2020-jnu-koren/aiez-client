@@ -13,7 +13,7 @@ class Train extends React.Component {
 
   render() {
     return (
-      <body>
+      <div>
         <header className="header">
           <div className="header__center">
             <div className="header__title">
@@ -29,7 +29,7 @@ class Train extends React.Component {
             </div>
           </div>
         </main>
-      </body>
+      </div>
     );
   }
 }

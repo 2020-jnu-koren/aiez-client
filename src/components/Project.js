@@ -9,28 +9,16 @@ class Project extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      projects: []
+      projects: null
     };
   }
-  
-  componentDidMount(){
-    this.callApi()
-    
+
+  componentDidMount() {
+    this.getMe();
   }
-  callApi = async () => {
-    axios({
-      method: "get",
-      url: "http://116.89.189.12/users",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      },
-      withCredentials: true
-    })
-      .then(res => console.log(res.data))
-      .then(response => response.json())
-      .then(projects => this.setState({ projects }));
-  };
+  async getMe() {
+    const result = await getMe();
+  }
   render() {
     return (
       <div>
