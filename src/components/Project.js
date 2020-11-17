@@ -3,9 +3,10 @@ import "./Project.css";
 import { Link } from "react-router-dom";
 import Projectls from "./Projectls";
 import axios from "axios";
+import { getMe } from "../services/user";
 
 class Project extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       projects: []
@@ -65,9 +66,13 @@ class Project extends React.Component {
           {/* <div className="project-lists2">
             <div className="no_project">프로젝트가 존재하지 않습니다.</div>
           </div> */}
-          {this.state.projects ? this.state.projects.map(p=>{
-            return <Projectls key={p._id} Date={p.createdAt} Name={p.title} />
-          }):""}
+          {this.state.projects
+            ? this.state.projects.map(p => {
+                return (
+                  <Projectls key={p._id} Date={p.createdAt} Name={p.title} />
+                );
+              })
+            : ""}
         </main>
       </div>
     );
