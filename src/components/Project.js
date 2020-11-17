@@ -8,7 +8,7 @@ class Project extends React.Component {
   constructor(props){
     super(props);
     this.state = {
-      projects: null
+      projects: []
     };
   }
   
@@ -16,22 +16,20 @@ class Project extends React.Component {
     this.callApi()
     
   }
-  callApi = async () =>{
-    console.log(this.state);
+  callApi = async () => {
     axios({
       method: "get",
       url: "http://116.89.189.12/users",
-      headers:{
-        "Accept": "application/json",
-        "Authorization": "Token 13bc8256196bcf1d297e80b136855ba7d0ec46a6",
-        "Content-Type": "application/json",
-        "credentials":"include"
-      }
-    }).then(res => console.log(res.data))
-    .then(response => response.json())
-    .then(projects => this.setState({ projects }));
-
-  }
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      withCredentials: true
+    })
+      .then(res => console.log(res.data))
+      .then(response => response.json())
+      .then(projects => this.setState({ projects }));
+  };
   render() {
     return (
       <div>
