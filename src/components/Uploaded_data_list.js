@@ -34,7 +34,7 @@ export default function PinnedSubheaderList({ uploadImageList }) {
     return (
       <li className="bananas">
         <div className="banana_set">
-          <img id="banana_img" src={RESTURL + item.path}></img>
+          <img id="banana_img" src={RESTURL + "/" + item.path}></img>
           <div>{pathSplit[pathSplit.length - 1]}</div>
         </div>
 
