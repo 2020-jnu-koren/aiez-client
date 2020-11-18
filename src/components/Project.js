@@ -43,7 +43,7 @@ class Project extends React.Component {
               </Link>
             </div>
           </div>
-       <div className="project-lists">
+       
           {this.state.projects
             ? this.state.projects.map(p => {
                 return (
@@ -51,7 +51,7 @@ class Project extends React.Component {
                 );
               })
             : ""}
-             </div>
+            
         </main>
       </div>
     );
