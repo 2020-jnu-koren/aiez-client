@@ -76,7 +76,7 @@
 .labeling_data__summary .labeling_dataset__title {
   font-size: 30px;
   width: 400px;
-  height: 50px;
+  height: "100%";
   display: flex;
   justify-content: center;
   align-items: center;

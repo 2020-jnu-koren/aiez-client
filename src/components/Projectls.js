@@ -26,7 +26,17 @@ class Projectls extends React.Component {
               학습하기
             </Link>
           </div>
-          <div className="project-test-btn project-btn">테스트</div>
+          <div className="project-test-btn project-btn">
+            {" "}
+            <Link
+              to={{
+                pathname: "/project/test_project/upload_data",
+                state: { projectId: this.props.id }
+              }}
+            >
+              테스트
+            </Link>
+          </div>
         </div>
       </div>
     );

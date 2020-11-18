@@ -172,7 +172,7 @@ class Labeling extends React.Component {
                   className="labeling_save__btn"
                   to="/project/new_project/train_data/setting"
                 >
-                  Save
+                  학습하기
                 </Link>
               </div>
             </div>

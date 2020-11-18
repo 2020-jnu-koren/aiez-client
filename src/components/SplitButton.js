@@ -11,7 +11,7 @@ import MenuItem from "@material-ui/core/MenuItem";
 import MenuList from "@material-ui/core/MenuList";
 import "./SplitButton.css";
 
-const options = ["YOLOv3", "YOLOv4"];
+const options = ["cocoSSD", "MobileNet"];
 
 export default function SplitButton() {
   const [open, setOpen] = React.useState(false);
@@ -28,10 +28,10 @@ export default function SplitButton() {
   };
 
   const handleToggle = () => {
-    setOpen((prevOpen) => !prevOpen);
+    setOpen(prevOpen => !prevOpen);
   };
 
-  const handleClose = (event) => {
+  const handleClose = event => {
     if (anchorRef.current && anchorRef.current.contains(event.target)) {
       return;
     }
@@ -79,7 +79,7 @@ export default function SplitButton() {
               {...TransitionProps}
               style={{
                 transformOrigin:
-                  placement === "bottom" ? "center top" : "center bottom",
+                  placement === "bottom" ? "center top" : "center bottom"
               }}
             >
               <Paper>
@@ -90,7 +90,7 @@ export default function SplitButton() {
                         key={option}
                         disabled={index === 2}
                         selected={index === selectedIndex}
-                        onClick={(event) => handleMenuItemClick(event, index)}
+                        onClick={event => handleMenuItemClick(event, index)}
                       >
                         {option}
                       </MenuItem>

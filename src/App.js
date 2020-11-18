@@ -15,6 +15,8 @@ import Navigation from "./components/Navigation";
 import Train from "./components/Train";
 import Test from "./components/Test";
 import Login from "./components/Login";
+import Test_Upload_data from "./components/Test_Upload_data";
+import Testing from "./components/Testing";
 
 function App() {
   return (
@@ -39,6 +41,15 @@ function App() {
         path="/project/new_project/labeling"
         exact={true}
         component={Labeling}
+      />
+      <Route
+        path="/project/test_project/upload_data"
+        component={Test_Upload_data}
+      />
+      <Route
+        path="/project/test_project/testing"
+        exact={true}
+        component={Testing}
       />
       <Route
         path="/project/new_project/train_data/setting"

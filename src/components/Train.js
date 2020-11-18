@@ -1,6 +1,5 @@
 import React from "react";
 import "./Train.css";
-import { Link } from "react-router-dom";
 import LinearProgressWithLabel from "./progress.js";
 
 class Train extends React.Component {

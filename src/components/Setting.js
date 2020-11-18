@@ -2,10 +2,9 @@ import React from "react";
 import "./Setting.css";
 import ParameterForm from "./ParameterForm.js";
 import SplitButton from "./SplitButton.js";
-import { Link } from "react-router-dom";
 
 class Setting extends React.Component {
-  handleCreate = (data) => {
+  handleCreate = data => {
     localStorage.setItem("epoch", data.epoch);
     localStorage.setItem("batch_size", data.batch_size);
     localStorage.setItem("iteration", data.iteration);
@@ -28,8 +27,8 @@ class Setting extends React.Component {
           </div>
           <section className="Setting_select">
             <div className="Setting_column">
-              <div className="Setting_big_item">Training Tool</div>
-              <div className="Setting_big_item">Parameter Setting</div>
+              <div className="Setting_big_item">학습 모델 선택</div>
+              <div className="Setting_big_item">파라미터 설정</div>
             </div>
             <div className="Setting_column">
               <div className="Training_Tool">

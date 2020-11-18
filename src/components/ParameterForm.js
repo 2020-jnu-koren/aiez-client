@@ -8,54 +8,54 @@ class ParameterForm extends Component {
   state = {
     epoch: 30,
     batch_size: 50,
-    iteration: 100, //default값
+    iteration: 100 //default값
   };
-  handleChange = (e) => {
+  handleChange = e => {
     this.setState({
-      [e.target.name]: parseInt(e.target.value),
+      [e.target.name]: parseInt(e.target.value)
     }); //치는거 바뀔떄마다 데이터 변경
   };
-  handleSubmit = (e) => {
+  handleSubmit = e => {
     e.preventDefault(); //페이지 리로딩 방지
     this.props.onCreate(this.state); //props로 받은 onCreate 호출
     window.location.href =
       "http://localhost:3000/aiez#/project/new_project/train";
   };
 
-  handleIncrease = (e) => {
+  handleIncrease = e => {
     e.preventDefault(); //페이지 리로딩 방지
     // const {a}= e.target.name;
     const { epoch, batch_size, iteration } = this.state;
     if (e.target.name === "epoch") {
       this.setState({
-        epoch: epoch + 1,
+        epoch: epoch + 1
       });
     } else if (e.target.name === "batch_size") {
       this.setState({
-        batch_size: batch_size + 1,
+        batch_size: batch_size + 1
       });
     } else {
       this.setState({
-        iteration: iteration + 1,
+        iteration: iteration + 1
       });
     }
   };
 
-  handleDecrease = (e) => {
+  handleDecrease = e => {
     e.preventDefault(); //페이지 리로딩 방지
     // const {a}= e.target.name;
     const { epoch, batch_size, iteration } = this.state;
     if (e.target.name === "epoch") {
       this.setState({
-        epoch: epoch - 1,
+        epoch: epoch - 1
       });
     } else if (e.target.name === "batch_size") {
       this.setState({
-        batch_size: batch_size - 1,
+        batch_size: batch_size - 1
       });
     } else {
       this.setState({
-        iteration: iteration - 1,
+        iteration: iteration - 1
       });
     }
   };
@@ -140,7 +140,7 @@ class ParameterForm extends Component {
             </div>
           </div>
           <button onClick={this.handleSubmit} className="labeling_save_btn">
-            Run
+            학습시작
           </button>
         </form>
       </div>
