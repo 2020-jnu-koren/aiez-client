@@ -43,13 +43,15 @@ class Project extends React.Component {
               </Link>
             </div>
           </div>
-          {this.state.projects
-            ? this.state.projects.map(p => {
-                return (
-                  <Projectls key={p._id} Date={p.createdAt} Name={p.title} />
-                );
-              })
-            : ""}
+          <div className="project-lists">
+            {this.state.projects
+              ? this.state.projects.map(p => {
+                  return (
+                    <Projectls key={p._id} Date={p.createdAt} Name={p.title} />
+                  );
+                })
+              : ""}
+          </div>
         </main>
       </div>
     );

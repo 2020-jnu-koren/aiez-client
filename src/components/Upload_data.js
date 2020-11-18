@@ -4,11 +4,12 @@ import Dropzone from "react-dropzone";
 import "./Upload_data.css";
 import InteractiveList from "./Uploaded_data_list.js";
 import Popup_Upload from "./Popup_Upload.js";
+import { postImage } from "../services/image";
 
 const imageMaxSize = 10000000; //bytes
 const acceptedFileTypes =
   "image/x-png, image/png, image/jpg, image/jpeg, image/gif";
-const acceptedFileTypesArray = acceptedFileTypes.split(",").map((item) => {
+const acceptedFileTypesArray = acceptedFileTypes.split(",").map(item => {
   return item.trim();
 });
 
@@ -16,11 +17,16 @@ class Upload_data extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      imgSrc: null,
-      showPopup: false,
+      uploadImageList: [],
+      showPopup: false
     };
   }
-  verifyFile = (files) => {
+
+  componentDidMount() {
+    console.log("this.props.location : ", this.props.location);
+  }
+
+  verifyFile = files => {
     if (files && files.length > 0) {
       const currentFile = files[0];
       const currentFileType = currentFile.type;
@@ -40,33 +46,31 @@ class Upload_data extends React.Component {
       return true;
     }
   };
-  handleOnDrop = (files, rejectedFiles) => {
+  handleOnDrop = async (files, rejectedFiles) => {
     if (rejectedFiles && rejectedFiles.length > 0) {
       this.verifyFile(rejectedFiles);
     }
     if (files && files.length > 0) {
       const isVerified = this.verifyFile(files);
       if (isVerified) {
+        console.log("[upload_data] files : ", files);
         //imageBase64Data
-        const currentFile = files[0];
-        const MyFileItemReader = new FileReader();
-        MyFileItemReader.addEventListener(
-          "load",
-          () => {
-            console.log(MyFileItemReader.result);
-            this.setState({
-              imgSrc: MyFileItemReader.result,
-            });
-          },
-          false
-        );
-        MyFileItemReader.readAsDataURL(currentFile);
+        const data = new FormData();
+        data.append("projectId", this.props.location.state.projectId);
+        for (let i = 0; i < files.length; i += 1) {
+          data.append("img", files[i]);
+        }
+        const result = await postImage(data);
+        console.log("[upload_data] result : ", result);
+        this.setState({
+          uploadImageList: this.state.uploadImageList.concat(result.data)
+        });
       }
     }
   };
   togglePopup() {
     this.setState({
-      showPopup: !this.state.showPopup,
+      showPopup: !this.state.showPopup
     });
   }
 
@@ -99,7 +103,7 @@ class Upload_data extends React.Component {
                             <div
                               {...getRootProps()}
                               className={classNames("dropzone", {
-                                "dropzone--isActive": isDragActive,
+                                "dropzone--isActive": isDragActive
                               })}
                             >
                               <input {...getInputProps()} />
@@ -117,7 +121,9 @@ class Upload_data extends React.Component {
                       </Dropzone>
                     </div>
                     <div className="uploaded_date_list">
-                      <InteractiveList />
+                      <InteractiveList
+                        uploadImageList={this.state.uploadImageList}
+                      />
                       <div className="upload_save">
                         <button
                           id="upload_save__btn"
@@ -145,7 +151,7 @@ class Upload_data extends React.Component {
                           <div
                             {...getRootProps()}
                             className={classNames("dropzone", {
-                              "dropzone--isActive": isDragActive,
+                              "dropzone--isActive": isDragActive
                             })}
                           >
                             <input {...getInputProps()} />

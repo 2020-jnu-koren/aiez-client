@@ -2,11 +2,6 @@ import React from "react";
 import "./Uploaded_data_list.css";
 import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
-import ListItem from "@material-ui/core/ListItem";
-import ListItemText from "@material-ui/core/ListItemText";
-import ListSubheader from "@material-ui/core/ListSubheader";
-import DeleteIcon from "@material-ui/icons/Delete";
-import IconButton from "@material-ui/core/IconButton";
 import banana1 from "./img/labeling_img/banana1.jpg";
 import banana2 from "./img/labeling_img/banana2.jpg";
 import banana3 from "./img/labeling_img/banana3.jpg";
@@ -17,7 +12,7 @@ import banana7 from "./img/labeling_img/banana7.jpg";
 import banana8 from "./img/labeling_img/banana8.jpg";
 import banana9 from "./img/labeling_img/banana9.jpg";
 import banana10 from "./img/labeling_img/banana10.jpg";
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
     maxWidth: 1300,
@@ -26,15 +21,15 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: theme.palette.background.paper,
     position: "relative",
     overflow: "auto",
-    maxHeight: 350,
+    maxHeight: 350
   },
   listSection: {
-    backgroundColor: "inherit",
+    backgroundColor: "inherit"
   },
   ul: {
     backgroundColor: "inherit",
-    padding: 0,
-  },
+    padding: 0
+  }
 }));
 
 export default function PinnedSubheaderList() {

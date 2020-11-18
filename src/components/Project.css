@@ -74,7 +74,7 @@ main {
 }
 .project-lists {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   width: 1300px;
   height: 500px;
   margin: 0 auto;

@@ -4,8 +4,32 @@ import { Link } from "react-router-dom";
 import upload from "./img/upload.jpg";
 import labeling from "./img/labeling.jpg";
 import lastone from "./img/lastone.jpg";
+import { getProjectById, postProject } from "../services/project";
 
 class New_project extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      createProjectId: ""
+    };
+  }
+
+  componentDidMount() {
+    this.createProject();
+  }
+
+  async createProject() {
+    const getProjectResult = await getProjectById();
+    const projectCount = getProjectResult.data.length;
+    console.log("result : ", getProjectResult.data);
+    console.log("projectCount : ", projectCount);
+    const postProjectResult = await postProject({
+      title: projectCount + 1 + "_project"
+    });
+    const createProjectId = postProjectResult.data._id;
+    this.setState({ createProjectId });
+  }
+
   render() {
     return (
       <body>
@@ -18,7 +42,12 @@ class New_project extends React.Component {
           <div className="Btns">
             <div className="BtnNNumber">
               <div className="Btn_number">1</div>
-              <Link to="/project/new_project/upload_data">
+              <Link
+                to={{
+                  pathname: "/project/new_project/upload_data",
+                  state: { projectId: this.state.createProjectId }
+                }}
+              >
                 <div className="Btn">
                   <div className="Btn_img Btn_item">
                     <img className="Btn_img" src={upload} alt="img" />
