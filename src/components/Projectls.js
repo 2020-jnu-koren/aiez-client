@@ -4,7 +4,7 @@ import { format } from "date-fns";
 class Projectls extends React.Component {
   render() {
     return (
-      <div className="project-lists">
+     
         <div className="project-list">
           <div className="project-list_info">
             <div className="project_date">
@@ -17,7 +17,7 @@ class Projectls extends React.Component {
             <div className="project-test-btn project-btn">Test</div>
           </div>
         </div>
-      </div>
+     
     );
   }
 }
