@@ -5,6 +5,7 @@ import "./Upload_data.css";
 import InteractiveList from "./Uploaded_data_list.js";
 import { getImage, postImage } from "../services/image";
 import { getProject } from "../services/project";
+import { Link } from "react-router-dom";
 
 const imageMaxSize = 10000000; //bytes
 const acceptedFileTypes =
@@ -137,7 +138,15 @@ class Upload_data extends React.Component {
                       />
                     )}
                     <div className="upload_save">
-                      <button id="upload_save__btn">Save</button>
+                      <Link
+                        id="upload_save__btn"
+                        to={{
+                          pathname: "/project/new_project/labeling",
+                          state: { uploadImageList: this.state.uploadImageList }
+                        }}
+                      >
+                        라벨링
+                      </Link>
                     </div>
                   </div>
                 </div>
