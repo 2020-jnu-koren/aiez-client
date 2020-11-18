@@ -1,35 +1,59 @@
 import React from "react";
 import "./Popup_Upload.css";
-import { Link } from "react-router-dom";
+import { postProject } from "../services/project";
 
 class Popup_Upload extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { title: "" };
+
+    this.handleChange = this.handleChange.bind(this);
+  }
+
+  async createProject(title) {
+    const postProjectResult = await postProject({ title });
+    this.props.concatProject(postProjectResult.data);
+  }
+
+  handleChange(event) {
+    this.setState({ title: event.target.value });
+  }
+
   render() {
     return (
       <div className="popup">
         <div className="popup_inner">
           <div className="popup_upload_center">
-            <div className="popup_upload__title">Create Dataset</div>
+            <div className="popup_upload__title">프로젝트 생성하기</div>
             <div className="popup_upload__main">
               <div className="popup_upload__name">
-                <div className="popup_upload__name_que">Dataset Title :</div>
-                <input className="popup_upload__name_ex" />
+                <div className="popup_upload__name_que">프로젝트 이름 :</div>
+                <input
+                  className="popup_upload__name_ex"
+                  type="text"
+                  name="name"
+                  onChange={this.handleChange}
+                />
               </div>
             </div>
             <div className="dataset_create__btns">
               <div className="dataset_create__ok">
-                <Link
+                <button
+                  onClick={() => {
+                    this.createProject(this.state.title);
+                    this.props.closePopup(true);
+                  }}
                   className="dataset_create__ok_btn"
-                  to="/project/new_project/prepare_data"
                 >
-                  OK
-                </Link>
+                  확인
+                </button>
               </div>
               <div className="dataset_create__cancel">
                 <button
                   id="dataset_create__cancel_btn"
                   onClick={this.props.closePopup}
                 >
-                  Cancel
+                  취소
                 </button>
               </div>
             </div>

@@ -1,14 +1,15 @@
 import React from "react";
 import "./Project.css";
-import { Link } from "react-router-dom";
 import Projectls from "./Projectls";
 import { getProjectById } from "../services/project";
+import Popup_Upload from "./Popup_Upload";
 
 class Project extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      projects: null
+      projects: null,
+      showPopup: false
     };
   }
 
@@ -21,7 +22,15 @@ class Project extends React.Component {
     this.setState({ projects: result.data });
   }
 
-  async getProject() {}
+  concatProject = project => {
+    this.setState({ projects: this.state.projects.concat(project) });
+  };
+
+  togglePopup() {
+    this.setState({
+      showPopup: !this.state.showPopup
+    });
+  }
 
   render() {
     return (
@@ -38,20 +47,37 @@ class Project extends React.Component {
               <div className="project-bar__title">Name</div>
             </div>
             <div className="project-bar__column new-project-btn__column">
-              <Link className="new-project-btn" to="/project/new_project">
+              <button
+                onClick={() => {
+                  this.setState({ showPopup: true });
+                }}
+                className="new-project-btn"
+              >
                 New Project
-              </Link>
+              </button>
             </div>
           </div>
           <div className="project-lists">
             {this.state.projects
               ? this.state.projects.map(p => {
+                  console.log("p : ", p);
                   return (
-                    <Projectls key={p._id} Date={p.createdAt} Name={p.title} />
+                    <Projectls
+                      key={p._id}
+                      Date={p.createdAt}
+                      Name={p.title}
+                      id={p._id}
+                    />
                   );
                 })
               : ""}
           </div>
+          {this.state.showPopup ? (
+            <Popup_Upload
+              closePopup={this.togglePopup.bind(this)}
+              concatProject={this.concatProject}
+            />
+          ) : null}
         </main>
       </div>
     );

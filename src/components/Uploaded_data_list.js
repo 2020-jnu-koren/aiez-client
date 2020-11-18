@@ -27,6 +27,7 @@ const useStyles = makeStyles(theme => ({
 }));
 
 export default function PinnedSubheaderList({ uploadImageList }) {
+  console.log("uploadImageList : ", uploadImageList);
   const classes = useStyles();
 
   const renderImage = item => {

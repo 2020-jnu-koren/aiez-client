@@ -14,22 +14,6 @@ class New_project extends React.Component {
     };
   }
 
-  componentDidMount() {
-    this.createProject();
-  }
-
-  async createProject() {
-    const getProjectResult = await getProjectById();
-    const projectCount = getProjectResult.data.length;
-    console.log("result : ", getProjectResult.data);
-    console.log("projectCount : ", projectCount);
-    const postProjectResult = await postProject({
-      title: projectCount + 1 + "_project"
-    });
-    const createProjectId = postProjectResult.data._id;
-    this.setState({ createProjectId });
-  }
-
   render() {
     return (
       <body>

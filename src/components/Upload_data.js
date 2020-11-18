@@ -3,8 +3,8 @@ import classNames from "classnames";
 import Dropzone from "react-dropzone";
 import "./Upload_data.css";
 import InteractiveList from "./Uploaded_data_list.js";
-import Popup_Upload from "./Popup_Upload.js";
-import { postImage } from "../services/image";
+import { getImage, postImage } from "../services/image";
+import { getProject } from "../services/project";
 
 const imageMaxSize = 10000000; //bytes
 const acceptedFileTypes =
@@ -24,7 +24,22 @@ class Upload_data extends React.Component {
 
   componentDidMount() {
     console.log("this.props.location : ", this.props.location);
+    this._getProject(this.props.location.state.projectId);
   }
+
+  _getProject = async projectId => {
+    const result = await getProject(projectId);
+    const imageList = [];
+    result.data.images.forEach(async (imageId, index) => {
+      const imageResult = await getImage(imageId);
+      imageList.push(imageResult.data);
+      if (index === result.data.images.length - 1) {
+        this.setState({
+          uploadImageList: this.state.uploadImageList.concat(imageList)
+        });
+      }
+    });
+  };
 
   verifyFile = files => {
     if (files && files.length > 0) {
@@ -68,14 +83,10 @@ class Upload_data extends React.Component {
       }
     }
   };
-  togglePopup() {
-    this.setState({
-      showPopup: !this.state.showPopup
-    });
-  }
 
   render() {
-    const { imgSrc } = this.state;
+    const { imgSrc, uploadImageList } = this.state;
+    console.log("uploadImageList : ", uploadImageList);
     return (
       <div className="App">
         <body>
@@ -90,56 +101,7 @@ class Upload_data extends React.Component {
             <div className="upload_data__title">Upload Data</div>
             <div>
               <div>
-                {imgSrc !== null ? (
-                  <div>
-                    <div>
-                      <Dropzone
-                        onDrop={this.handleOnDrop}
-                        accept={acceptedFileTypes}
-                        className="drop_zone"
-                      >
-                        {({ getRootProps, getInputProps, isDragActive }) => {
-                          return (
-                            <div
-                              {...getRootProps()}
-                              className={classNames("dropzone", {
-                                "dropzone--isActive": isDragActive
-                              })}
-                            >
-                              <input {...getInputProps()} />
-                              {isDragActive ? (
-                                <p>Drop files here...</p>
-                              ) : (
-                                <p>
-                                  파일을 드래그 하거나, 클릭하여 파일을
-                                  선택하세요.
-                                </p>
-                              )}
-                            </div>
-                          );
-                        }}
-                      </Dropzone>
-                    </div>
-                    <div className="uploaded_date_list">
-                      <InteractiveList
-                        uploadImageList={this.state.uploadImageList}
-                      />
-                      <div className="upload_save">
-                        <button
-                          id="upload_save__btn"
-                          onClick={this.togglePopup.bind(this)}
-                        >
-                          Save
-                        </button>
-                        {this.state.showPopup ? (
-                          <Popup_Upload
-                            closePopup={this.togglePopup.bind(this)}
-                          />
-                        ) : null}
-                      </div>
-                    </div>
-                  </div>
-                ) : (
+                <div>
                   <div>
                     <Dropzone
                       onDrop={this.handleOnDrop}
@@ -168,7 +130,17 @@ class Upload_data extends React.Component {
                       }}
                     </Dropzone>
                   </div>
-                )}
+                  <div className="uploaded_date_list">
+                    {uploadImageList.length !== 0 && (
+                      <InteractiveList
+                        uploadImageList={this.state.uploadImageList}
+                      />
+                    )}
+                    <div className="upload_save">
+                      <button id="upload_save__btn">Save</button>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </main>
