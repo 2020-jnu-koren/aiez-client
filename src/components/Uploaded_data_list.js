@@ -4,8 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import List from "@material-ui/core/List";
 import DeleteIcon from "@material-ui/icons/Delete";
 import IconButton from "@material-ui/core/IconButton";
-
-const IMAGE_URL = "http://localhost:4000/api/v1/";
+import { RESTURL } from "../services/common";
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -35,7 +34,7 @@ export default function PinnedSubheaderList({ uploadImageList }) {
     return (
       <li className="bananas">
         <div className="banana_set">
-          <img id="banana_img" src={IMAGE_URL + item.path}></img>
+          <img id="banana_img" src={RESTURL + item.path}></img>
           <div>{pathSplit[pathSplit.length - 1]}</div>
         </div>
 

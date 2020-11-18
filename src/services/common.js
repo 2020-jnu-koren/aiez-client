@@ -1,8 +1,8 @@
 import UrlAssembelr from "url-assembler";
 import axios from "axios";
 
-//export const RESTURL = UrlAssembelr("http://116.89.189.12/api/v1");
-export const RESTURL = UrlAssembelr("http://localhost:4000/api/v1");
+export const RESTURL = UrlAssembelr("http://116.89.189.12/api/v1");
+//export const RESTURL = UrlAssembelr("http://localhost:4000/api/v1");
 const METHOD = {
   POST: "POST",
   GET: "GET",
