@@ -14,11 +14,8 @@ class Home extends React.Component {
           </div>
           <img className="intro_background" src={background} alt="img"></img>
         </div>
-        <Link className="goToProject" to="/project/new_project">
-          NOW GET STARTED!
-        </Link>
         <Link className="login_btn" to="/login">
-          LogIn
+          시작하기
         </Link>
       </main>
     );
