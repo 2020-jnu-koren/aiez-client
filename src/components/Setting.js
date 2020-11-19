@@ -2,6 +2,14 @@ import React from "react";
 import "./Setting.css";
 import ParameterForm from "./ParameterForm.js";
 import SplitButton from "./SplitButton.js";
+import ReactHover, { Trigger, Hover } from 'react-hover'
+import './component.css'
+
+const optionsCursorTrueWithMargin = {
+  followCursor: true,
+  shiftX: 20,
+  shiftY: 0,
+}
 
 class Setting extends React.Component {
   handleCreate = data => {
@@ -41,12 +49,60 @@ class Setting extends React.Component {
                 <ul className="Setting_lists">
                   <li className="Setting_list">
                     <div className="Setting_item">Epoch</div>
+                    <div className="Setting_item__help">
+                      <ReactHover options={optionsCursorTrueWithMargin}>
+                        <Trigger type="trigger">
+                          <div className="trigger">
+                            <div>?</div>
+                          </div>
+                        </Trigger>
+                        <Hover type="hover">
+                          <div className={'hover'}>
+                            <blockquote className={'quote'}>
+                              데이터 학습 횟수로, 높을수록 데이터를 학습하는 횟수가 높아진다.
+                            </blockquote>
+                          </div>
+                        </Hover>
+                      </ReactHover>
+                    </div>
                   </li>
                   <li className="Setting_list">
                     <div className="Setting_item">Batch Size</div>
+                    <div className="Setting_item__help">
+                      <ReactHover options={optionsCursorTrueWithMargin}>
+                        <Trigger type="trigger">
+                          <div className="trigger">
+                            <div>?</div>
+                          </div>
+                        </Trigger>
+                        <Hover type="hover">
+                          <div className={'hover'}>
+                            <blockquote className={'quote'}>
+                              데이터 학습 횟수로, 높을수록 데이터를 학습하는 횟수가 높아진다.
+                            </blockquote>
+                          </div>
+                        </Hover>
+                      </ReactHover>
+                    </div>
                   </li>
                   <li className="Setting_list">
                     <div className="Setting_item">Iteration</div>
+                    <div className="Setting_item__help">
+                      <ReactHover options={optionsCursorTrueWithMargin}>
+                        <Trigger type="trigger">
+                          <div className="trigger">
+                            <div>?</div>
+                          </div>
+                        </Trigger>
+                        <Hover type="hover">
+                          <div className={'hover'}>
+                            <blockquote className={'quote'}>
+                              데이터 학습 횟수로, 높을수록 데이터를 학습하는 횟수가 높아진다.
+                            </blockquote>
+                          </div>
+                        </Hover>
+                      </ReactHover>
+                    </div>
                   </li>
                 </ul>
                 <div>

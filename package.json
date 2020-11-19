@@ -25,6 +25,7 @@
     "react-color-picker": "^4.0.2",
     "react-dom": "^16.13.1",
     "react-dropzone": "^11.0.2",
+    "react-hover": "^2.0.0",
     "react-image-crop": "^8.6.5",
     "react-input-color": "^3.0.1",
     "react-konva": "^16.13.0-5",
