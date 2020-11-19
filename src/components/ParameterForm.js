@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { RESTURL } from "../services/common";
 
 import "./ParameterForm.css";
 
@@ -18,8 +19,7 @@ class ParameterForm extends Component {
   handleSubmit = e => {
     e.preventDefault(); //페이지 리로딩 방지
     this.props.onCreate(this.state); //props로 받은 onCreate 호출
-    window.location.href =
-      "http://localhost:3000/aiez#/project/new_project/train";
+    window.location.href = RESTURL + "/aiez#/project/new_project/train";
   };
 
   handleIncrease = e => {

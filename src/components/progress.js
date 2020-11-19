@@ -8,7 +8,7 @@ import { stringNewLine } from "./utils";
 import Gate from "./gate.js";
 import { getRandomArbitrary } from "./utils.js";
 import { TRAIN_LOG } from "./constants.js";
-import { slice, isEmpty } from "lodash";
+import { slice } from "lodash";
 import Chart from "chart.js";
 let myChart;
 const lossMax = getRandomArbitrary(2.5, 5.0);
@@ -47,12 +47,18 @@ const useStyles = makeStyles({
 export default function LinearWithValueLabel() {
   const classes = useStyles();
   const chartRef = useRef();
+  const logRef = useRef();
   const [progress, setProgress] = useState(0);
   const [isActive, setIsActive] = useState(true);
   const logStr = stringNewLine(TRAIN_LOG);
   const [count, setCount] = useState(0);
-  const [chartLabel, setChartLabel] = useState([]);
   const [chartData, setChartData] = useState([]);
+
+  useEffect(() => {
+    logRef.current.scrollTop = logRef.current.scrollHeight;
+
+    console.log("logRef : ", logRef.current.scrollIntoView);
+  }, [count]);
 
   useEffect(() => {
     if (myChart) {
@@ -83,6 +89,13 @@ export default function LinearWithValueLabel() {
         ]
       },
       options: {
+        animation: {
+          duration: 0 // general animation time
+        },
+        hover: {
+          animationDuration: 0 // duration of animations when hovering an item
+        },
+        responsiveAnimationDuration: 0,
         responsive: true,
         maintainAspectRatio: false,
         tooltips: {
@@ -141,7 +154,6 @@ export default function LinearWithValueLabel() {
           const change = getRandomArbitrary(-0.05, 0.01);
           console.log("currentLoss : ", currentLoss);
           currentLoss = currentLoss + change;
-          setChartLabel(prev => [...prev, count]);
           setChartData(prev => [...prev, currentLoss]);
         }
       }, 100);
@@ -168,7 +180,7 @@ export default function LinearWithValueLabel() {
       <div>
         <canvas ref={chartRef} id="chart" />
       </div>
-      <div style={{ maxHeight: 500, overflow: "auto" }}>
+      <div ref={logRef} style={{ maxHeight: 500, overflow: "auto" }}>
         {slice(logStr, 0, count)}
       </div>
     </div>

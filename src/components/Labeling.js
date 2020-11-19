@@ -5,12 +5,14 @@ import { Link } from "react-router-dom";
 import { Annotator } from "image-labeler-react";
 import Popup_Class from "./Popup_Class.js";
 import InteractiveList from "./Dataset_list.js";
+import * as ml5 from "ml5";
 import { RESTURL } from "../services/common";
 
 class Labeling extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
+      model: null,
       showPopup: false,
       classList: [],
       uploadImageList: [],
@@ -20,7 +22,6 @@ class Labeling extends React.Component {
 
   componentDidMount() {
     const getClassList = localStorage.getItem("classList");
-    console.log("getClassList : ", getClassList);
     if (getClassList) {
       this.setState({ classList: JSON.parse(getClassList) });
     }
@@ -29,16 +30,29 @@ class Labeling extends React.Component {
         uploadImageList: this.props.location.state.uploadImageList
       });
     }
-    console.log(
-      "this.props.location.state : ",
-      this.props.location.state?.uploadImageList
-    );
+    this.initFeatureExtractor();
   }
+
+  initFeatureExtractor = async () => {
+    const featureExtractor = await ml5.featureExtractor("MobileNet", {
+      version: 1,
+      epochs: 50
+    });
+    const classifier = await featureExtractor.classification();
+    this.setState({ model: classifier });
+    console.log("featureExtractor : ", featureExtractor);
+    console.log("classifier : ", classifier);
+  };
 
   setStateClassList = classList => {
     this.setState({ classList });
     localStorage.setItem("classList", JSON.stringify(classList));
   };
+
+  // When the model is loaded
+  modelLoaded() {
+    console.log("Model Loaded!");
+  }
 
   togglePopup() {
     this.setState({
@@ -120,7 +134,17 @@ class Labeling extends React.Component {
                     width={600}
                     imageUrl={RESTURL + "/" + uploadImageList[index]?.path}
                     asyncUpload={async labeledData => {
-                      // upload labeled data
+                      console.log("labeledData : ", labeledData);
+                      const image = new Image(
+                        labeledData.width,
+                        labeledData.height
+                      );
+                      image.src = labeledData.image;
+                      image.crossOrigin = "anonymous";
+                      this.state.model.addImage(
+                        image,
+                        labeledData.boxes[0].annotation
+                      );
                     }}
                     types={classList.map(item => item.customClassName)}
                     defaultType={
@@ -170,7 +194,10 @@ class Labeling extends React.Component {
               <div className="labeling_save_center">
                 <Link
                   className="labeling_save__btn"
-                  to="/project/new_project/train_data/setting"
+                  to={{
+                    pathname: "/project/new_project/train_data/setting",
+                    state: { model: this.state.model }
+                  }}
                 >
                   학습하기
                 </Link>

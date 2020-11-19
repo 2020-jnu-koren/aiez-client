@@ -9,6 +9,9 @@ class Setting extends React.Component {
     localStorage.setItem("batch_size", data.batch_size);
     localStorage.setItem("iteration", data.iteration);
   };
+  componentDidMount() {
+    console.log(this.props.location.state);
+  }
   render() {
     return (
       <body>
