@@ -8,8 +8,8 @@ import "./ParameterForm.css";
 class ParameterForm extends Component {
   state = {
     epoch: 30,
-    batch_size: 50,
-    iteration: 100 //default값
+    batch_size: 10,
+    iteration: 1 //default값
   };
   handleChange = e => {
     this.setState({
