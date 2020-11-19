@@ -5,8 +5,7 @@ import { Link } from "react-router-dom";
 import InteractiveList from "./TestDataset_list";
 import ReactLoading from "react-loading";
 import { RESTURL } from "../services/common";
-import * as cocoSsd from "@tensorflow-models/coco-ssd";
-import "@tensorflow/tfjs";
+import * as ml5 from "ml5";
 
 class Testing extends React.Component {
   constructor(props) {
@@ -24,13 +23,15 @@ class Testing extends React.Component {
         uploadImageList: this.props.location.state.uploadImageList
       });
     }
-    cocoSsd.load().then(model => {
-      console.log("model : ", model);
-      this.setState({
-        model: model
-      });
-    });
+    this.initModel();
   }
+  initModel = async () => {
+    const cocoSsd = await ml5.objectDetector("cocossd");
+    this.setState({
+      model: cocoSsd
+    });
+  };
+
   onImageChange = e => {
     const c = document.getElementById("canvas");
     const ctx = c.getContext("2d");
@@ -43,27 +44,27 @@ class Testing extends React.Component {
       ctx.textBaseline = "top";
 
       predictions.forEach(prediction => {
-        const x = prediction.bbox[0];
-        const y = prediction.bbox[1];
-        const width = prediction.bbox[2];
-        const height = prediction.bbox[3];
+        const x = prediction.x;
+        const y = prediction.y;
+        const width = prediction.width;
+        const height = prediction.height;
         // Draw the bounding box.
         ctx.strokeStyle = "#00FFFF";
         ctx.lineWidth = 4;
         ctx.strokeRect(x, y, width, height);
         // Draw the label background.
         ctx.fillStyle = "#00FFFF";
-        const textWidth = ctx.measureText(prediction.class).width;
+        const textWidth = ctx.measureText(prediction.label).width;
         const textHeight = parseInt(font, 10); // base 10
         ctx.fillRect(x, y, textWidth + 4, textHeight + 4);
       });
 
       predictions.forEach(prediction => {
-        const x = prediction.bbox[0];
-        const y = prediction.bbox[1];
+        const x = prediction.x;
+        const y = prediction.y;
         // Draw the text last to ensure it's on top.
         ctx.fillStyle = "#000000";
-        ctx.fillText(prediction.class, x, y);
+        ctx.fillText(prediction.label, x, y);
       });
     });
   };
