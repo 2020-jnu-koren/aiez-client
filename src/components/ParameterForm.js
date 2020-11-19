@@ -19,7 +19,8 @@ class ParameterForm extends Component {
   handleSubmit = e => {
     e.preventDefault(); //페이지 리로딩 방지
     this.props.onCreate(this.state); //props로 받은 onCreate 호출
-    window.location.href = RESTURL + "/aiez#/project/new_project/train";
+    window.location.href =
+      "http://116.89.189.12/aiez#/project/new_project/train";
   };
 
   handleIncrease = e => {
