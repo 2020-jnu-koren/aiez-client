@@ -11308,7 +11308,7 @@ react-color-picker@^4.0.2:
     region "^2.1.2"
     tinycolor2 "^1.4.1"
 
-react-color@^2.18.1:
+react-color@^2.19.3:
   version "2.19.3"
   resolved "https://registry.yarnpkg.com/react-color/-/react-color-2.19.3.tgz#ec6c6b4568312a3c6a18420ab0472e146aa5683d"
   integrity sha512-LEeGE/ZzNLIsFWa1TMe8y5VYqr7bibneWmvJwm1pCn/eNmrabWDh659JSPn9BuaMpEfU83WTOJfnCcjDZwNQTA==
@@ -11384,6 +11384,13 @@ react-error-overlay@^6.0.7:
   version "6.0.8"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.8.tgz#474ed11d04fc6bda3af643447d85e9127ed6b5de"
   integrity sha512-HvPuUQnLp5H7TouGq3kzBeioJmXms1wHy9EGjz2OURWBp4qZO6AfGEcnxts1D/CbwPLRAgTMPCEgYhA3sEM4vw==
+
+react-hover@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-hover/-/react-hover-2.0.0.tgz#b17ccbe56388700c5cc8bba3a144c370854c97ab"
+  integrity sha512-3fb7OsDCwR4CWBp+1gpy5LezyQnlCV5LxIk3FM+9RcO7ckMh+27rPHrPkld7jfBPO/ZTvNANkhZU9IFynSn+ZQ==
+  dependencies:
+    prop-types "^15.5.10"
 
 react-image-crop@^8.6.5:
   version "8.6.6"
