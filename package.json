@@ -29,7 +29,7 @@
     "react-hover": "^2.0.0",
     "react-image-crop": "^8.6.5",
     "react-input-color": "^3.0.1",
-    "react-konva": "^16.13.0-5",
+    "react-konva": "^16.13.0-6",
     "react-loading": "^2.0.3",
     "react-native-modals": "^0.19.9",
     "react-router-dom": "^5.2.0",

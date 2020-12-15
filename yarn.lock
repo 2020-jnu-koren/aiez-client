@@ -11385,6 +11385,13 @@ react-error-overlay@^6.0.7:
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.8.tgz#474ed11d04fc6bda3af643447d85e9127ed6b5de"
   integrity sha512-HvPuUQnLp5H7TouGq3kzBeioJmXms1wHy9EGjz2OURWBp4qZO6AfGEcnxts1D/CbwPLRAgTMPCEgYhA3sEM4vw==
 
+react-hover@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-hover/-/react-hover-2.0.0.tgz#b17ccbe56388700c5cc8bba3a144c370854c97ab"
+  integrity sha512-3fb7OsDCwR4CWBp+1gpy5LezyQnlCV5LxIk3FM+9RcO7ckMh+27rPHrPkld7jfBPO/ZTvNANkhZU9IFynSn+ZQ==
+  dependencies:
+    prop-types "^15.5.10"
+
 react-image-crop@^8.6.5:
   version "8.6.6"
   resolved "https://registry.yarnpkg.com/react-image-crop/-/react-image-crop-8.6.6.tgz#326f85b4da63c2f39a610f8832abea5d551a338f"
@@ -11433,7 +11440,7 @@ react-is@^17.0.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.1.tgz#5b3531bd76a645a4c9fb6e693ed36419e3301339"
   integrity sha512-NAnt2iGDXohE5LI7uBnLnqvLQMtzhkiAOLXTmv+qnF9Ky7xAPcX8Up/xWIhxvLVGJvuLiNc4xQLtuqDRzb4fSA==
 
-react-konva@^16.13.0-5:
+react-konva@^16.13.0-6:
   version "16.13.0-6"
   resolved "https://registry.yarnpkg.com/react-konva/-/react-konva-16.13.0-6.tgz#eae2864da3810bbfa33e159d027fcff82fcb0c32"
   integrity sha512-wqIrZSneJWn2D2ExwtSqp9U804OUA3RhkxzzRbp/2s+54mx9iU2lpP2CNGHMAnxNccR03mcLwGirb6wvPOOPLA==
