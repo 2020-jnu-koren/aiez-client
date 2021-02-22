@@ -1979,10 +1979,12 @@
     "@testing-library/dom" "^6.15.0"
     "@types/testing-library__react" "^9.1.2"
 
-"@testing-library/user-event@^7.2.1":
-  version "7.2.1"
-  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-7.2.1.tgz#2ad4e844175a3738cb9e7064be5ea070b8863a1c"
-  integrity sha512-oZ0Ib5I4Z2pUEcoo95cT1cr6slco9WY7yiPpG+RGNkj8YcYgJnM7pXmYmorNOReh8MIGcKSqXyeGjxnr8YiZbA==
+"@testing-library/user-event@^12.7.2":
+  version "12.7.2"
+  resolved "https://registry.yarnpkg.com/@testing-library/user-event/-/user-event-12.7.2.tgz#78749eadc8324009b428bdb8d7edc64b63c3e86c"
+  integrity sha512-6uUYor7b0+JAcanK0rmCEZGo6t0n2F4WUKXL9toQg495a9YE2MHlJ8GWzfCgsUPyVHw8SNaMN8UrZoHABf+oOg==
+  dependencies:
+    "@babel/runtime" "^7.12.5"
 
 "@types/aria-query@^4.2.0":
   version "4.2.0"
@@ -11384,6 +11386,13 @@ react-error-overlay@^6.0.7:
   version "6.0.8"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.8.tgz#474ed11d04fc6bda3af643447d85e9127ed6b5de"
   integrity sha512-HvPuUQnLp5H7TouGq3kzBeioJmXms1wHy9EGjz2OURWBp4qZO6AfGEcnxts1D/CbwPLRAgTMPCEgYhA3sEM4vw==
+
+react-hover@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-hover/-/react-hover-2.0.0.tgz#b17ccbe56388700c5cc8bba3a144c370854c97ab"
+  integrity sha512-3fb7OsDCwR4CWBp+1gpy5LezyQnlCV5LxIk3FM+9RcO7ckMh+27rPHrPkld7jfBPO/ZTvNANkhZU9IFynSn+ZQ==
+  dependencies:
+    prop-types "^15.5.10"
 
 react-image-crop@^8.6.5:
   version "8.6.6"
